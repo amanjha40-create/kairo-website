@@ -1,0 +1,39 @@
+# Kairo
+
+> Kairo is an AI-powered verified professional identity and trust infrastructure platform. It turns one-time background checks into a reusable, source-verified professional identity that moves with the candidate — so companies hire faster and candidates carry their trust everywhere.
+
+Kairo replaces fragmented, repetitive background verification with a portable Trust Profile. Every credential is source-verified directly with the original employer or institution — never self-attested. Hiring teams get instant, audit-ready verification; candidates own a reusable identity they can share across opportunities.
+
+Core concepts:
+- Portable Trust Profile — a reusable, candidate-owned verified identity.
+- Source-verified records — employment, education, and identity confirmed at the source.
+- Career Vault — a single trusted store for verified professional records.
+- Trust Graph — the network of candidates, employers, and institutions backing each verification.
+
+Positioning: AI-native trust infrastructure for modern hiring. Built for startups, scaling teams, and enterprises that need fast, fraud-resistant candidate verification.
+
+## Pages
+
+- [Home](https://kairoid.com/): Product overview, hero, dashboard preview, and core value props.
+- [How it works](https://kairoid.com/how-it-works): The 4-step verification flow — Consent → Source-verify → Portable Trust Profile → Instant trust.
+- [Pricing](https://kairoid.com/pricing): Transparent per-verification pricing from ₹99, enterprise options.
+- [About](https://kairoid.com/about): Company mission, founders, and principles.
+- [Contact](https://kairoid.com/contact): Demo request and direct contact channels.
+
+## Solutions
+
+- [AI background verification](https://kairoid.com/ai-background-verification): How AI orchestrates source-verified employment, education, and identity checks.
+- [Employment verification](https://kairoid.com/employment-verification-platform): Verify past roles, titles, and tenure directly with the source employer.
+- [Portable Trust Profiles](https://kairoid.com/portable-trust-profiles): Candidate-owned portable Trust Profiles that compound trust across hires.
+- [Startup hiring fraud](https://kairoid.com/startup-hiring-fraud): Detect fabricated employers, inflated tenure, and identity mismatches.
+
+## Blog
+
+- [AI background verification guide](https://kairoid.com/blog/ai-background-verification-guide)
+- [Portable Trust Profile explained](https://kairoid.com/blog/portable-trust-profile-explained)
+- [Hiring fraud in startups (2026)](https://kairoid.com/blog/hiring-fraud-startups-2026)
+- [Reduce time-to-hire with verified candidates](https://kairoid.com/blog/reduce-time-to-hire-with-verified-candidates)
+
+## Optional
+
+- [Sitemap](https://kairoid.com/sitemap.xml)
