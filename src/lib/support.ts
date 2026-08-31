@@ -1,4 +1,4 @@
-export const SUPPORT_EMAIL = "support@kairoid.com";
+export const SUPPORT_EMAIL = "contact@kairoid.com";
 export const CONTACT_EMAIL = "contact@kairoid.com";
 export const SUPPORT_PHONE_DISPLAY = "+91 8767299299";
 export const SUPPORT_PHONE_TEL = "tel:+918767299299";
