@@ -1,4 +1,6 @@
 import { CONTACT_TO_EMAIL, type ContactFormData } from "@/lib/contact";
+import { SUPPORT_EMAIL } from "@/lib/support";
+import type { SupportRequestData } from "@/lib/support-request";
 
 type SesConfig = {
   accessKeyId: string;
@@ -8,9 +10,7 @@ type SesConfig = {
   fromEmail: string;
 };
 
-type SesSendResult =
-  | { ok: true; messageId: string }
-  | { ok: false; error: string };
+type SesSendResult = { ok: true; messageId: string } | { ok: false; error: string };
 
 function getSesConfig(): SesConfig | null {
   const accessKeyId = process.env.AWS_ACCESS_KEY_ID;
@@ -79,7 +79,7 @@ async function getSignatureKey(secretAccessKey: string, dateStamp: string, regio
   return hmacSha256Raw(kService, "aws4_request");
 }
 
-function buildPlainTextBody(payload: ContactFormData): string {
+function buildContactPlainTextBody(payload: ContactFormData): string {
   return [
     "New Kairo contact request",
     "",
@@ -94,27 +94,60 @@ function buildPlainTextBody(payload: ContactFormData): string {
   ].join("\n");
 }
 
-export async function sendContactEmail(payload: ContactFormData): Promise<SesSendResult> {
+function buildSupportPlainTextBody(payload: SupportRequestData): string {
+  return [
+    "New Kairo support request",
+    "",
+    `Name: ${payload.name}`,
+    `Email: ${payload.email}`,
+    `Product: ${payload.product}`,
+    `Issue category: ${payload.category}`,
+    `Subject: ${payload.subject}`,
+    `Relevant public ID: ${payload.relevantPublicId || "Not provided"}`,
+    "",
+    "Description:",
+    payload.description,
+    "",
+    "Safe context:",
+    `Current route: ${payload.currentRoute || "Not provided"}`,
+    `App version: ${payload.appVersion || "Not provided"}`,
+    `Platform: ${payload.platform || "Not provided"}`,
+    `Page URL: ${payload.pageUrl || "Not provided"}`,
+    `Referrer: ${payload.referrer || "Not provided"}`,
+  ].join("\n");
+}
+
+async function sendSesEmail(args: {
+  to: string;
+  replyTo: string;
+  subject: string;
+  body: string;
+  serviceLabel: string;
+}): Promise<SesSendResult> {
   const config = getSesConfig();
   if (!config) {
-    return { ok: false, error: "Contact email service is not configured." };
+    return { ok: false, error: `${args.serviceLabel} email service is not configured.` };
   }
 
   const endpoint = `https://email.${config.region}.amazonaws.com/v2/email/outbound-emails`;
   const host = `email.${config.region}.amazonaws.com`;
   const now = new Date();
-  const amzDate = now.toISOString().replace(/[:-]|\.\d{3}/g, "").slice(0, 15) + "Z";
+  const amzDate =
+    now
+      .toISOString()
+      .replace(/[:-]|\.\d{3}/g, "")
+      .slice(0, 15) + "Z";
   const dateStamp = amzDate.slice(0, 8);
 
   const requestBody = JSON.stringify({
     FromEmailAddress: config.fromEmail,
-    Destination: { ToAddresses: [CONTACT_TO_EMAIL] },
-    ReplyToAddresses: [payload.email],
+    Destination: { ToAddresses: [args.to] },
+    ReplyToAddresses: [args.replyTo],
     Content: {
       Simple: {
-        Subject: { Data: `New contact request - ${payload.company}` },
+        Subject: { Data: args.subject },
         Body: {
-          Text: { Data: buildPlainTextBody(payload) },
+          Text: { Data: args.body },
         },
       },
     },
@@ -153,11 +186,7 @@ export async function sendContactEmail(payload: ContactFormData): Promise<SesSen
     await sha256Hex(canonicalRequest),
   ].join("\n");
 
-  const signingKey = await getSignatureKey(
-    config.secretAccessKey,
-    dateStamp,
-    config.region,
-  );
+  const signingKey = await getSignatureKey(config.secretAccessKey, dateStamp, config.region);
   const signature = await hmacSha256Hex(signingKey, stringToSign);
 
   const response = await fetch(endpoint, {
@@ -173,28 +202,47 @@ export async function sendContactEmail(payload: ContactFormData): Promise<SesSen
       Host: host,
       "X-Amz-Content-Sha256": payloadHash,
       "X-Amz-Date": amzDate,
-      ...(config.sessionToken
-        ? { "X-Amz-Security-Token": config.sessionToken }
-        : {}),
+      ...(config.sessionToken ? { "X-Amz-Security-Token": config.sessionToken } : {}),
     },
     body: requestBody,
   });
 
   if (!response.ok) {
     const body = await response.text().catch(() => "");
-    console.error("[contact-email] SES delivery failed", response.status, body);
-    return { ok: false, error: "Contact email delivery failed." };
+    console.error(`[${args.serviceLabel}] SES delivery failed`, response.status, body);
+    return { ok: false, error: `${args.serviceLabel} email delivery failed.` };
   }
 
-  const data = (await response.json().catch(() => null)) as
-    | { MessageId?: string; messageId?: string }
-    | null;
+  const data = (await response.json().catch(() => null)) as {
+    MessageId?: string;
+    messageId?: string;
+  } | null;
   const messageId = data?.MessageId ?? data?.messageId;
 
   if (!messageId) {
-    console.error("[contact-email] SES response missing message id", data);
-    return { ok: false, error: "Contact email delivery failed." };
+    console.error(`[${args.serviceLabel}] SES response missing message id`, data);
+    return { ok: false, error: `${args.serviceLabel} email delivery failed.` };
   }
 
   return { ok: true, messageId };
+}
+
+export async function sendContactEmail(payload: ContactFormData): Promise<SesSendResult> {
+  return sendSesEmail({
+    to: CONTACT_TO_EMAIL,
+    replyTo: payload.email,
+    subject: `New contact request - ${payload.company}`,
+    body: buildContactPlainTextBody(payload),
+    serviceLabel: "contact-email",
+  });
+}
+
+export async function sendSupportRequestEmail(payload: SupportRequestData): Promise<SesSendResult> {
+  return sendSesEmail({
+    to: SUPPORT_EMAIL,
+    replyTo: payload.email,
+    subject: `[${payload.product}] ${payload.subject}`,
+    body: buildSupportPlainTextBody(payload),
+    serviceLabel: "support-email",
+  });
 }

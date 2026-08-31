@@ -28,7 +28,6 @@ import { Route as LoginRouteImport } from './routes/login'
 import { Route as InstitutionWorkspaceRouteImport } from './routes/institution-workspace'
 import { Route as HrWorkspaceRouteImport } from './routes/hr-workspace'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
-import { Route as HelpCenterRouteImport } from './routes/help-center'
 import { Route as GuidesRouteImport } from './routes/guides'
 import { Route as ForgotPasswordRouteImport } from './routes/forgot-password'
 import { Route as ForProfessionalsRouteImport } from './routes/for-professionals'
@@ -45,8 +44,11 @@ import { Route as AiVerificationEngineRouteImport } from './routes/ai-verificati
 import { Route as AiBackgroundVerificationRouteImport } from './routes/ai-background-verification'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as HelpCenterIndexRouteImport } from './routes/help-center.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as AppIndexRouteImport } from './routes/app.index'
+import { Route as HelpCenterContactSupportRouteImport } from './routes/help-center.contact-support'
+import { Route as HelpCenterSlugRouteImport } from './routes/help-center.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as AppTeamRouteImport } from './routes/app.team'
 import { Route as AppSetupRouteImport } from './routes/app.setup'
@@ -61,6 +63,7 @@ import { Route as AppPeopleIndexRouteImport } from './routes/app.people.index'
 import { Route as AppVerificationsIdRouteImport } from './routes/app.verifications.$id'
 import { Route as AppPeopleIdRouteImport } from './routes/app.people.$id'
 import { Route as AppInvitationsIdRouteImport } from './routes/app.invitations.$id'
+import { Route as ApiPublicSupportRouteImport } from './routes/api/public/support'
 import { Route as ApiPublicContactRouteImport } from './routes/api/public/contact'
 
 const TrustScoreRoute = TrustScoreRouteImport.update({
@@ -158,11 +161,6 @@ const HowItWorksRoute = HowItWorksRouteImport.update({
   path: '/how-it-works',
   getParentRoute: () => rootRouteImport,
 } as any)
-const HelpCenterRoute = HelpCenterRouteImport.update({
-  id: '/help-center',
-  path: '/help-center',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const GuidesRoute = GuidesRouteImport.update({
   id: '/guides',
   path: '/guides',
@@ -247,6 +245,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HelpCenterIndexRoute = HelpCenterIndexRouteImport.update({
+  id: '/help-center/',
+  path: '/help-center/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -256,6 +259,17 @@ const AppIndexRoute = AppIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => AppRoute,
+} as any)
+const HelpCenterContactSupportRoute =
+  HelpCenterContactSupportRouteImport.update({
+    id: '/help-center/contact-support',
+    path: '/help-center/contact-support',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const HelpCenterSlugRoute = HelpCenterSlugRouteImport.update({
+  id: '/help-center/$slug',
+  path: '/help-center/$slug',
+  getParentRoute: () => rootRouteImport,
 } as any)
 const BlogSlugRoute = BlogSlugRouteImport.update({
   id: '/blog/$slug',
@@ -327,6 +341,11 @@ const AppInvitationsIdRoute = AppInvitationsIdRouteImport.update({
   path: '/$id',
   getParentRoute: () => AppInvitationsRoute,
 } as any)
+const ApiPublicSupportRoute = ApiPublicSupportRouteImport.update({
+  id: '/api/public/support',
+  path: '/api/public/support',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ApiPublicContactRoute = ApiPublicContactRouteImport.update({
   id: '/api/public/contact',
   path: '/api/public/contact',
@@ -350,7 +369,6 @@ export interface FileRoutesByFullPath {
   '/for-professionals': typeof ForProfessionalsRoute
   '/forgot-password': typeof ForgotPasswordRoute
   '/guides': typeof GuidesRoute
-  '/help-center': typeof HelpCenterRoute
   '/how-it-works': typeof HowItWorksRoute
   '/hr-workspace': typeof HrWorkspaceRoute
   '/institution-workspace': typeof InstitutionWorkspaceRoute
@@ -379,9 +397,13 @@ export interface FileRoutesByFullPath {
   '/app/setup': typeof AppSetupRoute
   '/app/team': typeof AppTeamRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/help-center/$slug': typeof HelpCenterSlugRoute
+  '/help-center/contact-support': typeof HelpCenterContactSupportRoute
   '/app/': typeof AppIndexRoute
   '/blog/': typeof BlogIndexRoute
+  '/help-center/': typeof HelpCenterIndexRoute
   '/api/public/contact': typeof ApiPublicContactRoute
+  '/api/public/support': typeof ApiPublicSupportRoute
   '/app/invitations/$id': typeof AppInvitationsIdRoute
   '/app/people/$id': typeof AppPeopleIdRoute
   '/app/verifications/$id': typeof AppVerificationsIdRoute
@@ -404,7 +426,6 @@ export interface FileRoutesByTo {
   '/for-professionals': typeof ForProfessionalsRoute
   '/forgot-password': typeof ForgotPasswordRoute
   '/guides': typeof GuidesRoute
-  '/help-center': typeof HelpCenterRoute
   '/how-it-works': typeof HowItWorksRoute
   '/hr-workspace': typeof HrWorkspaceRoute
   '/institution-workspace': typeof InstitutionWorkspaceRoute
@@ -433,9 +454,13 @@ export interface FileRoutesByTo {
   '/app/setup': typeof AppSetupRoute
   '/app/team': typeof AppTeamRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/help-center/$slug': typeof HelpCenterSlugRoute
+  '/help-center/contact-support': typeof HelpCenterContactSupportRoute
   '/app': typeof AppIndexRoute
   '/blog': typeof BlogIndexRoute
+  '/help-center': typeof HelpCenterIndexRoute
   '/api/public/contact': typeof ApiPublicContactRoute
+  '/api/public/support': typeof ApiPublicSupportRoute
   '/app/invitations/$id': typeof AppInvitationsIdRoute
   '/app/people/$id': typeof AppPeopleIdRoute
   '/app/verifications/$id': typeof AppVerificationsIdRoute
@@ -460,7 +485,6 @@ export interface FileRoutesById {
   '/for-professionals': typeof ForProfessionalsRoute
   '/forgot-password': typeof ForgotPasswordRoute
   '/guides': typeof GuidesRoute
-  '/help-center': typeof HelpCenterRoute
   '/how-it-works': typeof HowItWorksRoute
   '/hr-workspace': typeof HrWorkspaceRoute
   '/institution-workspace': typeof InstitutionWorkspaceRoute
@@ -489,9 +513,13 @@ export interface FileRoutesById {
   '/app/setup': typeof AppSetupRoute
   '/app/team': typeof AppTeamRoute
   '/blog/$slug': typeof BlogSlugRoute
+  '/help-center/$slug': typeof HelpCenterSlugRoute
+  '/help-center/contact-support': typeof HelpCenterContactSupportRoute
   '/app/': typeof AppIndexRoute
   '/blog/': typeof BlogIndexRoute
+  '/help-center/': typeof HelpCenterIndexRoute
   '/api/public/contact': typeof ApiPublicContactRoute
+  '/api/public/support': typeof ApiPublicSupportRoute
   '/app/invitations/$id': typeof AppInvitationsIdRoute
   '/app/people/$id': typeof AppPeopleIdRoute
   '/app/verifications/$id': typeof AppVerificationsIdRoute
@@ -517,7 +545,6 @@ export interface FileRouteTypes {
     | '/for-professionals'
     | '/forgot-password'
     | '/guides'
-    | '/help-center'
     | '/how-it-works'
     | '/hr-workspace'
     | '/institution-workspace'
@@ -546,9 +573,13 @@ export interface FileRouteTypes {
     | '/app/setup'
     | '/app/team'
     | '/blog/$slug'
+    | '/help-center/$slug'
+    | '/help-center/contact-support'
     | '/app/'
     | '/blog/'
+    | '/help-center/'
     | '/api/public/contact'
+    | '/api/public/support'
     | '/app/invitations/$id'
     | '/app/people/$id'
     | '/app/verifications/$id'
@@ -571,7 +602,6 @@ export interface FileRouteTypes {
     | '/for-professionals'
     | '/forgot-password'
     | '/guides'
-    | '/help-center'
     | '/how-it-works'
     | '/hr-workspace'
     | '/institution-workspace'
@@ -600,9 +630,13 @@ export interface FileRouteTypes {
     | '/app/setup'
     | '/app/team'
     | '/blog/$slug'
+    | '/help-center/$slug'
+    | '/help-center/contact-support'
     | '/app'
     | '/blog'
+    | '/help-center'
     | '/api/public/contact'
+    | '/api/public/support'
     | '/app/invitations/$id'
     | '/app/people/$id'
     | '/app/verifications/$id'
@@ -626,7 +660,6 @@ export interface FileRouteTypes {
     | '/for-professionals'
     | '/forgot-password'
     | '/guides'
-    | '/help-center'
     | '/how-it-works'
     | '/hr-workspace'
     | '/institution-workspace'
@@ -655,9 +688,13 @@ export interface FileRouteTypes {
     | '/app/setup'
     | '/app/team'
     | '/blog/$slug'
+    | '/help-center/$slug'
+    | '/help-center/contact-support'
     | '/app/'
     | '/blog/'
+    | '/help-center/'
     | '/api/public/contact'
+    | '/api/public/support'
     | '/app/invitations/$id'
     | '/app/people/$id'
     | '/app/verifications/$id'
@@ -682,7 +719,6 @@ export interface RootRouteChildren {
   ForProfessionalsRoute: typeof ForProfessionalsRoute
   ForgotPasswordRoute: typeof ForgotPasswordRoute
   GuidesRoute: typeof GuidesRoute
-  HelpCenterRoute: typeof HelpCenterRoute
   HowItWorksRoute: typeof HowItWorksRoute
   HrWorkspaceRoute: typeof HrWorkspaceRoute
   InstitutionWorkspaceRoute: typeof InstitutionWorkspaceRoute
@@ -703,8 +739,12 @@ export interface RootRouteChildren {
   TrustProfilesRoute: typeof TrustProfilesRoute
   TrustScoreRoute: typeof TrustScoreRoute
   BlogSlugRoute: typeof BlogSlugRoute
+  HelpCenterSlugRoute: typeof HelpCenterSlugRoute
+  HelpCenterContactSupportRoute: typeof HelpCenterContactSupportRoute
   BlogIndexRoute: typeof BlogIndexRoute
+  HelpCenterIndexRoute: typeof HelpCenterIndexRoute
   ApiPublicContactRoute: typeof ApiPublicContactRoute
+  ApiPublicSupportRoute: typeof ApiPublicSupportRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -842,13 +882,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof HowItWorksRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/help-center': {
-      id: '/help-center'
-      path: '/help-center'
-      fullPath: '/help-center'
-      preLoaderRoute: typeof HelpCenterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/guides': {
       id: '/guides'
       path: '/guides'
@@ -961,6 +994,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/help-center/': {
+      id: '/help-center/'
+      path: '/help-center'
+      fullPath: '/help-center/'
+      preLoaderRoute: typeof HelpCenterIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
@@ -974,6 +1014,20 @@ declare module '@tanstack/react-router' {
       fullPath: '/app/'
       preLoaderRoute: typeof AppIndexRouteImport
       parentRoute: typeof AppRoute
+    }
+    '/help-center/contact-support': {
+      id: '/help-center/contact-support'
+      path: '/help-center/contact-support'
+      fullPath: '/help-center/contact-support'
+      preLoaderRoute: typeof HelpCenterContactSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help-center/$slug': {
+      id: '/help-center/$slug'
+      path: '/help-center/$slug'
+      fullPath: '/help-center/$slug'
+      preLoaderRoute: typeof HelpCenterSlugRouteImport
+      parentRoute: typeof rootRouteImport
     }
     '/blog/$slug': {
       id: '/blog/$slug'
@@ -1073,6 +1127,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppInvitationsIdRouteImport
       parentRoute: typeof AppInvitationsRoute
     }
+    '/api/public/support': {
+      id: '/api/public/support'
+      path: '/api/public/support'
+      fullPath: '/api/public/support'
+      preLoaderRoute: typeof ApiPublicSupportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/api/public/contact': {
       id: '/api/public/contact'
       path: '/api/public/contact'
@@ -1147,7 +1208,6 @@ const rootRouteChildren: RootRouteChildren = {
   ForProfessionalsRoute: ForProfessionalsRoute,
   ForgotPasswordRoute: ForgotPasswordRoute,
   GuidesRoute: GuidesRoute,
-  HelpCenterRoute: HelpCenterRoute,
   HowItWorksRoute: HowItWorksRoute,
   HrWorkspaceRoute: HrWorkspaceRoute,
   InstitutionWorkspaceRoute: InstitutionWorkspaceRoute,
@@ -1168,8 +1228,12 @@ const rootRouteChildren: RootRouteChildren = {
   TrustProfilesRoute: TrustProfilesRoute,
   TrustScoreRoute: TrustScoreRoute,
   BlogSlugRoute: BlogSlugRoute,
+  HelpCenterSlugRoute: HelpCenterSlugRoute,
+  HelpCenterContactSupportRoute: HelpCenterContactSupportRoute,
   BlogIndexRoute: BlogIndexRoute,
+  HelpCenterIndexRoute: HelpCenterIndexRoute,
   ApiPublicContactRoute: ApiPublicContactRoute,
+  ApiPublicSupportRoute: ApiPublicSupportRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

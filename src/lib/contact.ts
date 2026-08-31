@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import { siteUrl } from "@/lib/domain-config";
+
 const requiredTrimmedString = (label: string, max: number) =>
   z
     .string()
@@ -8,6 +10,10 @@ const requiredTrimmedString = (label: string, max: number) =>
     .max(max, `${label} must be ${max} characters or fewer`);
 
 export const CONTACT_TO_EMAIL = "contact@kairoid.com";
+
+export function contactEndpointUrl(): string {
+  return siteUrl("/api/public/contact");
+}
 
 export const contactFormSchema = z.object({
   firstName: requiredTrimmedString("First name", 80),
@@ -23,28 +29,71 @@ export const contactFormSchema = z.object({
   website: z.string().trim().max(0, "Spam submission rejected").optional().default(""),
 });
 
-export const contactSuccessResponseSchema = z.object({
-  ok: z.literal(true),
-  messageId: z.string().min(1),
-});
-
-export const contactErrorResponseSchema = z.object({
-  ok: z.literal(false),
-  error: z.string().min(1),
-  fieldErrors: z.record(z.array(z.string())).optional(),
-});
-
-export const contactResponseSchema = z.union([
-  contactSuccessResponseSchema,
-  contactErrorResponseSchema,
-]);
-
 export type ContactFormInput = z.input<typeof contactFormSchema>;
 export type ContactFormData = z.infer<typeof contactFormSchema>;
-export type ContactResponse = z.infer<typeof contactResponseSchema>;
+
+export const contactAcceptedResponseSchema = z.object({
+  status: z.literal("accepted"),
+  message: z.string().min(1),
+});
+
+export const contactApiErrorDetailSchema = z.object({
+  location: z.array(z.union([z.string(), z.number()])),
+  message: z.string().min(1),
+  error_type: z.string().min(1).optional(),
+});
+
+export const contactApiErrorResponseSchema = z.object({
+  error: z.object({
+    code: z.string().min(1),
+    message: z.string().min(1),
+    details: z.array(contactApiErrorDetailSchema).optional(),
+  }),
+});
+
+export type ContactResponse = z.infer<typeof contactAcceptedResponseSchema>;
 
 export function flattenFieldErrors(error: z.ZodError<ContactFormInput>) {
   return Object.fromEntries(
     Object.entries(error.flatten().fieldErrors).filter(([, issues]) => issues?.length),
   ) as Partial<Record<keyof ContactFormInput, string[]>>;
+}
+
+export function zodIssuesToApiDetails(error: z.ZodError) {
+  return error.issues.map((issue) => ({
+    location: issue.path.length ? issue.path : ["body"],
+    message: issue.message,
+    error_type: issue.code,
+  }));
+}
+
+const backendToFrontendFieldMap: Partial<Record<string, keyof ContactFormInput>> = {
+  firstName: "firstName",
+  first_name: "firstName",
+  lastName: "lastName",
+  last_name: "lastName",
+  email: "email",
+  work_email: "email",
+  company: "company",
+  hires: "hires",
+  hires_per_month: "hires",
+  message: "message",
+  website: "website",
+};
+
+export function mapBackendFieldErrors(
+  details: Array<{ location: Array<string | number>; message: string }> | undefined,
+): Partial<Record<keyof ContactFormInput, string[]>> {
+  if (!details?.length) return {};
+  const fieldErrors: Partial<Record<keyof ContactFormInput, string[]>> = {};
+
+  for (const detail of details) {
+    const fieldKey = detail.location[detail.location.length - 1];
+    if (typeof fieldKey !== "string") continue;
+    const formField = backendToFrontendFieldMap[fieldKey];
+    if (!formField) continue;
+    fieldErrors[formField] = [...(fieldErrors[formField] ?? []), detail.message];
+  }
+
+  return fieldErrors;
 }

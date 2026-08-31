@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { sendContactEmail } from "@/lib/aws-ses";
-import { contactFormSchema, flattenFieldErrors } from "@/lib/contact";
+import { contactFormSchema, zodIssuesToApiDetails } from "@/lib/contact";
 
 // Simple in-memory rate limit (per worker instance). Best-effort spam guard.
 const HITS = new Map<string, { count: number; reset: number }>();
@@ -29,7 +29,12 @@ export const Route = createFileRoute("/api/public/contact")({
           "unknown";
         if (!rateLimit(ip)) {
           return Response.json(
-            { ok: false, error: "Too many requests" },
+            {
+              error: {
+                code: "rate_limited",
+                message: "You’re sending messages too quickly. Please try again shortly.",
+              },
+            },
             { status: 429 },
           );
         }
@@ -39,7 +44,12 @@ export const Route = createFileRoute("/api/public/contact")({
           raw = await request.json();
         } catch {
           return Response.json(
-            { ok: false, error: "Invalid JSON" },
+            {
+              error: {
+                code: "invalid_json",
+                message: "We couldn't read that request. Please try again.",
+              },
+            },
             { status: 400 },
           );
         }
@@ -48,11 +58,13 @@ export const Route = createFileRoute("/api/public/contact")({
         if (!parsed.success) {
           return Response.json(
             {
-              ok: false,
-              error: "Please review the highlighted fields and try again.",
-              fieldErrors: flattenFieldErrors(parsed.error),
+              error: {
+                code: "validation_error",
+                message: "Please review the highlighted fields and try again.",
+                details: zodIssuesToApiDetails(parsed.error),
+              },
             },
-            { status: 400 },
+            { status: 422 },
           );
         }
 
@@ -60,14 +72,19 @@ export const Route = createFileRoute("/api/public/contact")({
         if (!result.ok) {
           return Response.json(
             {
-              ok: false,
-              error: result.error,
+              error: {
+                code: "service_unavailable",
+                message: result.error,
+              },
             },
             { status: 503 },
           );
         }
 
-        return Response.json({ ok: true, messageId: result.messageId });
+        return Response.json({
+          status: "accepted",
+          message: "Thanks — we’ve received your message. We’ll get back to you shortly.",
+        });
       },
       OPTIONS: async () =>
         new Response(null, {
