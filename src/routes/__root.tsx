@@ -78,8 +78,8 @@ const organizationSchema = {
   "@type": ["Organization", "LocalBusiness"],
   name: "Kairo",
   url: WEBSITE_URL,
-  logo: `${WEBSITE_URL}/favicon.ico`,
-  image: `${WEBSITE_URL}/favicon.ico`,
+  logo: `${WEBSITE_URL}/kairo-mark.png`,
+  image: `${WEBSITE_URL}/kairo-mark.png`,
   description:
     "Portable trust infrastructure. Kairo begins with employment verification and is building a lifelong, candidate-owned Trust Passport.",
   email: "contact@kairoid.com",
@@ -157,7 +157,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+      { rel: "icon", type: "image/png", sizes: "512x512", href: "/kairo-mark.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
