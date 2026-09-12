@@ -35,7 +35,7 @@ export const supportRequestSchema = z.object({
   name: requiredTrimmedString("Name", 160),
   email: requiredTrimmedString("Email", 255).email("Enter a valid email address"),
   product: z.enum(supportProducts, {
-    errorMap: () => ({ message: "Choose the Kairo product you need help with" }),
+    errorMap: () => ({ message: "Choose the KairoID product you need help with" }),
   }),
   category: z.enum(supportIssueCategories, {
     errorMap: () => ({ message: "Choose the issue category that fits best" }),

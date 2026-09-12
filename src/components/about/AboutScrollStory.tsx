@@ -234,7 +234,7 @@ function LayerVisual({ active }: { active: boolean }) {
             <div className="flex-1 text-sm font-semibold">{l.label}</div>
             {i === layers.length - 1 && (
               <div className="rounded-md border border-primary/30 bg-primary/10 px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-primary">
-                Kairo
+                KairoID
               </div>
             )}
           </motion.div>
@@ -278,7 +278,7 @@ const FRAMES: StoryFrame[] = [
     step: "04",
     eyebrow: "What we're building",
     title: "The trust layer for modern hiring.",
-    body: "Kairo is the infrastructure beneath every hire — identity, employment and education stitched into one source-verified, reusable trust graph.",
+    body: "KairoID is the infrastructure beneath every hire — identity, employment and education stitched into one source-verified, reusable trust graph.",
     Visual: ({ active }) => <LayerVisual active={active} />,
   },
 ];
@@ -293,7 +293,7 @@ export function AboutScrollStory() {
       eyebrow="Our story"
       headline={
         <>
-          Why we built <span className="text-gradient-teal">Kairo.</span>
+          Why we built <span className="text-gradient-teal">KairoID.</span>
         </>
       }
       intro="Four scenes — from the broken status quo to the trust layer modern hiring deserves."

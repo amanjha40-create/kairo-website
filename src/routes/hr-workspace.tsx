@@ -11,7 +11,7 @@ import teamAsset from "@/assets/hr-workspace/team.png.asset.json";
 import inviteModalAsset from "@/assets/hr-workspace/invite-modal.png.asset.json";
 import { HR_WORKSPACE_URL, urlLabel } from "@/lib/domain-config";
 
-const TITLE = "HR Workspace — Kairo";
+const TITLE = "HR Workspace — KairoID";
 const DESC = "The employer workspace for consent-based employment verification and trusted candidate profiles.";
 const OVERVIEW_LABEL = urlLabel(HR_WORKSPACE_URL);
 
@@ -38,7 +38,7 @@ function HRWorkspacePage() {
         title="Employment verification,"
         gradientWord="reimagined."
         intro="A workspace for HR and people teams to receive verified Trust Passports, respond to employment verification requests, and collaborate — with consent at the centre of every action."
-        right={<BrowserShot src={overviewAsset.url} alt="Kairo Trust Workspace overview with KPIs and Needs Your Attention" urlLabel={OVERVIEW_LABEL} />}
+        right={<BrowserShot src={overviewAsset.url} alt="KairoID Trust Workspace overview with KPIs and Needs Your Attention" urlLabel={OVERVIEW_LABEL} />}
         ctaLabel="Open HR Workspace"
         ctaTo={HR_WORKSPACE_URL}
         secondaryLabel="Book a demo"
@@ -119,7 +119,7 @@ function HRWorkspacePage() {
         alt
         eyebrow="Benefits"
         title="Why teams"
-        gradientWord="choose Kairo."
+        gradientWord="choose KairoID."
       >
         <BenefitGrid
           items={[

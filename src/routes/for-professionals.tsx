@@ -22,7 +22,7 @@ import {
 } from "@/components/product-pages/shared";
 import { PhoneFrame, productScreens } from "@/components/product/screens";
 
-const TITLE = "For Professionals — Kairo";
+const TITLE = "For Professionals — KairoID";
 const DESC =
   "Build a Trust Passport you own for life and share with consent across every opportunity.";
 
@@ -80,7 +80,7 @@ function ForProfessionalsPage() {
         eyebrow="For Professionals"
         title="Your professional trust,"
         gradientWord="ready wherever you go."
-        intro="Verify once. Own forever. Share with consent. Kairo gives professionals a Trust Passport that carries verified employment, education and identity across every opportunity."
+        intro="Verify once. Own forever. Share with consent. KairoID gives professionals a Trust Passport that carries verified employment, education and identity across every opportunity."
         right={
           <div className="flex justify-center">
             <PhoneFrame
@@ -238,7 +238,7 @@ function ForProfessionalsPage() {
             {
               i: UserCheck,
               t: "Create your profile",
-              d: "Set up your Kairo account.",
+              d: "Set up your KairoID account.",
             },
             {
               i: Fingerprint,

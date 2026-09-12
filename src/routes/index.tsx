@@ -22,9 +22,9 @@ import { HR_WORKSPACE_URL, siteUrl, urlHost, urlLabel } from "@/lib/domain-confi
 import { SmartLink } from "@/components/site/SmartLink";
 
 const PAGE_URL = siteUrl("/");
-const PAGE_TITLE = "Kairo — AI Verified Professional Identity Platform";
+const PAGE_TITLE = "KairoID — AI Verified Professional Identity Platform";
 const PAGE_DESC =
-  "AI-native trust infrastructure for hiring. Source-verify candidates, build reusable Trust Profiles, and ship offers in days — not weeks.";
+  "KairoID: Verify once. Trusted everywhere. Build reusable Trust Profiles from source-verified professional information.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
           name: PAGE_TITLE,
           url: PAGE_URL,
           description: PAGE_DESC,
-          isPartOf: { "@type": "WebSite", name: "Kairo", url: siteUrl("/") },
+          isPartOf: { "@type": "WebSite", name: "KairoID", url: siteUrl("/") },
           about: {
             "@type": "Thing",
             name: "AI-powered verified professional identity and trust infrastructure",
@@ -336,7 +336,7 @@ function HomePage() {
                   Every time you change jobs or pursue a new opportunity, your professional trust starts from zero.
                 </p>
                 <p className="mt-3 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-                  Kairo is building the Trust Infrastructure that transforms verified professional facts into a reusable Trust Passport that you own and share with consent.
+                  KairoID is building the Trust Infrastructure that transforms verified professional facts into a reusable Trust Passport that you own and share with consent.
                 </p>
               </Reveal>
               <Reveal delay={0.24}>
@@ -413,7 +413,7 @@ function HomePage() {
 
 
 
-      {/* SEE KAIRO IN ACTION — product preview */}
+      {/* SEE KairoID IN ACTION — product preview */}
       <section className="relative border-b border-border overflow-hidden bg-background">
         <div className="absolute inset-0 bg-grid-faint opacity-40 -z-10" />
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[520px] rounded-full bg-primary/10 blur-3xl -z-10" />
@@ -475,10 +475,10 @@ function HomePage() {
                   Hiring shouldn&apos;t begin with chasing documents and repeating the same employment checks.
                 </p>
                 <p>
-                  With Kairo, candidates share a trusted professional profile built from verified employment history, education, and certifications—giving employers faster, more reliable verification with the individual&apos;s consent.
+                  With KairoID, candidates share a trusted professional profile built from verified employment history, education, and certifications—giving employers faster, more reliable verification with the individual&apos;s consent.
                 </p>
                 <p>
-                  Employment verification is the first application of Kairo&apos;s Trust Infrastructure, making trust portable instead of rebuilding it for every hiring process.
+                  Employment verification is the first application of KairoID&apos;s Trust Infrastructure, making trust portable instead of rebuilding it for every hiring process.
                 </p>
               </div>
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
@@ -522,7 +522,7 @@ function HomePage() {
                 <span className="text-gradient-teal">should move with you.</span>
               </h2>
               <p className="mt-5 text-base md:text-lg text-background/70 max-w-xl leading-relaxed">
-                Whether you&apos;re building your professional reputation or hiring with confidence, Kairo makes trusted professional information portable, reusable, and always shared with your consent.
+                Whether you&apos;re building your professional reputation or hiring with confidence, KairoID makes trusted professional information portable, reusable, and always shared with your consent.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button asChild size="lg" className="bg-background text-foreground hover:bg-background/90 rounded-xl h-12 px-6 shadow-premium font-semibold">

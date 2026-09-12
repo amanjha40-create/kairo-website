@@ -232,7 +232,7 @@ function buildActivity(
       id: `pa-${i}-clar-req`,
       kind: "clarification-req",
       label: "Clarification requested from candidate",
-      actor: "Kairo Trust Engine",
+      actor: "KairoID Trust Engine",
       at: new Date(now - 2 * 86400e3).toISOString(),
       requestId,
     });
@@ -250,7 +250,7 @@ function buildActivity(
       id: `pa-${i}-completed`,
       kind: "completed",
       label: "Verification completed",
-      actor: "Kairo Trust Engine",
+      actor: "KairoID Trust Engine",
       at: new Date(now - 12 * 3600e3).toISOString(),
       requestId,
     });
@@ -259,7 +259,7 @@ function buildActivity(
       id: `pa-${i}-unable`,
       kind: "unable",
       label: "Unable to complete verification",
-      actor: "Kairo Trust Engine",
+      actor: "KairoID Trust Engine",
       at: new Date(now - 20 * 3600e3).toISOString(),
       requestId,
     });

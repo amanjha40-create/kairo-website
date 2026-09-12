@@ -159,7 +159,7 @@ export const seedRequests: VerificationRequest[] = seedEmployees.slice(0, 15).ma
       { at: new Date(Date.now() - daysAgo * 86400000).toISOString(), label: "Request created", actor: "HR" },
       { at: new Date(Date.now() - daysAgo * 86400000 + 3600000).toISOString(), label: "Employee notified", actor: "System" },
       ...(status !== "Pending" ? [{ at: new Date(Date.now() - (daysAgo - 1) * 86400000).toISOString(), label: "Documents received", actor: "Employee" }] : []),
-      ...(status === "Verified" ? [{ at: new Date(Date.now() - Math.max(1, daysAgo - 2) * 86400000).toISOString(), label: "Verification approved", actor: "Kairo AI" }] : []),
+      ...(status === "Verified" ? [{ at: new Date(Date.now() - Math.max(1, daysAgo - 2) * 86400000).toISOString(), label: "Verification approved", actor: "KairoID AI" }] : []),
       ...(status === "Rejected" ? [{ at: new Date(Date.now() - Math.max(1, daysAgo - 2) * 86400000).toISOString(), label: "Rejected — tenure mismatch", actor: "Reviewer" }] : []),
     ],
     employmentHistory: [
@@ -170,7 +170,7 @@ export const seedRequests: VerificationRequest[] = seedEmployees.slice(0, 15).ma
 });
 
 export const seedActivity: ActivityItem[] = [
-  { id: "a1", kind: "verified", actor: "Kairo AI", subject: "Priya Raman", at: "2m ago" },
+  { id: "a1", kind: "verified", actor: "KairoID AI", subject: "Priya Raman", at: "2m ago" },
   { id: "a2", kind: "invited", actor: "Riya Kapoor", subject: "3 employees", at: "14m ago" },
   { id: "a3", kind: "completed", actor: "System", subject: "Arjun Mehta — Employment", at: "1h ago" },
   { id: "a4", kind: "documents", actor: "Aman Joshi", subject: "requested payslip from Sara Khan", at: "3h ago" },

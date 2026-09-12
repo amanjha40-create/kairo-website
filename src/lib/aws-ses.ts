@@ -81,7 +81,7 @@ async function getSignatureKey(secretAccessKey: string, dateStamp: string, regio
 
 function buildContactPlainTextBody(payload: ContactFormData): string {
   return [
-    "New Kairo contact request",
+    "New KairoID contact request",
     "",
     `First name: ${payload.firstName}`,
     `Last name: ${payload.lastName}`,
@@ -96,7 +96,7 @@ function buildContactPlainTextBody(payload: ContactFormData): string {
 
 function buildSupportPlainTextBody(payload: SupportRequestData): string {
   return [
-    "New Kairo support request",
+    "New KairoID support request",
     "",
     `Name: ${payload.name}`,
     `Email: ${payload.email}`,

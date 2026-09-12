@@ -13,7 +13,7 @@ import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/app/notifications")({
-  head: () => ({ meta: [{ title: "Notifications · Kairo Trust Workspace" }] }),
+  head: () => ({ meta: [{ title: "Notifications · KairoID Trust Workspace" }] }),
   component: NotificationsPage,
 });
 

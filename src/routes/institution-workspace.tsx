@@ -9,7 +9,7 @@ import personDetailShot from "@/assets/institution-workspace/person-detail.png.a
 import peopleShot from "@/assets/institution-workspace/people.png.asset.json";
 import { UNIVERSITY_URL, urlLabel } from "@/lib/domain-config";
 
-const TITLE = "Institution Workspace — Kairo";
+const TITLE = "Institution Workspace — KairoID";
 const DESC = "The workspace for universities, colleges and credential issuers to verify education records and issue trusted credentials.";
 const URL_LABEL = urlLabel(UNIVERSITY_URL);
 

@@ -11,7 +11,7 @@ import { ProfileTypeStep, type ProfileType } from "@/components/onboarding/Profi
 export const Route = createFileRoute("/onboarding")({
   head: () => ({
     meta: [
-      { title: "Welcome to Kairo — Onboarding" },
+      { title: "Welcome to KairoID — Onboarding" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
@@ -30,7 +30,7 @@ const steps = [
     icon: Sparkles,
     eyebrow: "The shift",
     title: "Verify candidates faster with reusable trust.",
-    body: "Kairo gives hiring teams instant access to source-verified professional records that move with the candidate.",
+    body: "KairoID gives hiring teams instant access to source-verified professional records that move with the candidate.",
     visual: <PortableTrustVisual />,
   },
   {

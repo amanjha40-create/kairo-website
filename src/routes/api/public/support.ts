@@ -85,7 +85,7 @@ export const Route = createFileRoute("/api/public/support")({
 
         return Response.json({
           status: "accepted",
-          message: "Thanks — your support request has been received by Kairo.",
+          message: "Thanks — your support request has been received by KairoID.",
         });
       },
       OPTIONS: async () =>

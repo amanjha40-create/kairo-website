@@ -24,13 +24,13 @@ export const Route = createFileRoute("/help-center/$slug")({
     const url = siteUrl(`/help-center/${params.slug}`);
     return {
       meta: [
-        { title: `${article.title} | Kairo Help Centre` },
+        { title: `${article.title} | KairoID Help Centre` },
         { name: "description", content: article.summary },
-        { property: "og:title", content: `${article.title} | Kairo Help Centre` },
+        { property: "og:title", content: `${article.title} | KairoID Help Centre` },
         { property: "og:description", content: article.summary },
         { property: "og:url", content: url },
         { property: "og:type", content: "article" },
-        { name: "twitter:title", content: `${article.title} | Kairo Help Centre` },
+        { name: "twitter:title", content: `${article.title} | KairoID Help Centre` },
         { name: "twitter:description", content: article.summary },
         { name: "keywords", content: article.keywords.join(", ") },
       ],
@@ -43,8 +43,8 @@ export const Route = createFileRoute("/help-center/$slug")({
             "@type": "Article",
             headline: article.title,
             description: article.summary,
-            author: { "@type": "Organization", name: "Kairo" },
-            publisher: { "@type": "Organization", name: "Kairo", url: siteUrl("/") },
+            author: { "@type": "Organization", name: "KairoID" },
+            publisher: { "@type": "Organization", name: "KairoID", url: siteUrl("/") },
             mainEntityOfPage: url,
             keywords: article.keywords.join(", "),
           }),
@@ -187,11 +187,11 @@ function HelpArticlePage() {
                   <ShieldAlert className="h-4 w-4" /> Still need help?
                 </div>
                 <h2 className="mt-3 text-2xl font-semibold tracking-tight">
-                  Contact Kairo Support
+                  Contact KairoID Support
                 </h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                   For account access, delivery, verification, or onboarding issues, use the support
-                  hub. Never send Kairo your password, OTP, access token, refresh token, or private
+                  hub. Never send KairoID your password, OTP, access token, refresh token, or private
                   key.
                 </p>
               </div>

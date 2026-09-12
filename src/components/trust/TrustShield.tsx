@@ -8,7 +8,7 @@ interface Props {
 }
 
 /**
- * Kairo Trust Shield — proprietary mark used across the website
+ * KairoID Trust Shield — proprietary mark used across the website
  * to symbolize verified, portable trust.
  */
 export function TrustShield({ size = 72, active = true, className, showCheck = true }: Props) {

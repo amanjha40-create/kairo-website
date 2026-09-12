@@ -10,15 +10,15 @@ import onboardingAsset from "@/assets/product/onboarding.png.asset.json";
 import digilockerAsset from "@/assets/product/digilocker.png.asset.json";
 
 export const productScreens = {
-  home: { src: homeAsset.url, alt: "Kairo home dashboard with live trust score" },
+  home: { src: homeAsset.url, alt: "KairoID home dashboard with live trust score" },
   vault: { src: vaultAsset.url, alt: "Trust Vault with platform experience and verified licenses" },
-  share: { src: shareAsset.url, alt: "Share verified Kairo profile via QR code" },
-  profile: { src: profileAsset.url, alt: "Kairo professional profile with trust score" },
-  swiggy: { src: swiggyAsset.url, alt: "Verified Swiggy platform experience inside Kairo" },
-  uber: { src: uberAsset.url, alt: "Pending Uber verification inside Kairo" },
-  license: { src: licenseAsset.url, alt: "Verified driving license inside Kairo" },
-  onboarding: { src: onboardingAsset.url, alt: "Kairo onboarding — choose your profile type" },
-  digilocker: { src: digilockerAsset.url, alt: "DigiLocker identity verified inside Kairo" },
+  share: { src: shareAsset.url, alt: "Share verified KairoID profile via QR code" },
+  profile: { src: profileAsset.url, alt: "KairoID professional profile with trust score" },
+  swiggy: { src: swiggyAsset.url, alt: "Verified Swiggy platform experience inside KairoID" },
+  uber: { src: uberAsset.url, alt: "Pending Uber verification inside KairoID" },
+  license: { src: licenseAsset.url, alt: "Verified driving license inside KairoID" },
+  onboarding: { src: onboardingAsset.url, alt: "KairoID onboarding — choose your profile type" },
+  digilocker: { src: digilockerAsset.url, alt: "DigiLocker identity verified inside KairoID" },
 };
 
 export { PhoneFrame };

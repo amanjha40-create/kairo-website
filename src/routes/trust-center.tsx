@@ -18,12 +18,12 @@ import { buildSeoHead, type SeoFaq } from "@/components/site/SeoLandingTemplate"
 import { siteUrl } from "@/lib/domain-config";
 
 const URL = siteUrl("/trust-center");
-const TITLE = "Trust Center — Verification Methodology, Privacy & Consent | Kairo";
+const TITLE = "Trust Center — Verification Methodology, Privacy & Consent | KairoID";
 const DESC =
-  "How Kairo verifies records, how candidate consent works, and the principles behind portable trust infrastructure.";
+  "How KairoID verifies records, how candidate consent works, and the principles behind portable trust infrastructure.";
 
 const faqs: SeoFaq[] = [
-  { q: "Who owns a Kairo Trust Profile?", a: "The candidate. Trust Profiles are individual-owned and shared only with explicit consent." },
+  { q: "Who owns a KairoID Trust Profile?", a: "The candidate. Trust Profiles are individual-owned and shared only with explicit consent." },
   { q: "How does consent work?", a: "Every verification is initiated by the candidate. They authorize the records to be verified and choose who can see the resulting Trust Profile." },
   { q: "What gets verified?", a: "Identity, employment history, education, references, certifications, and platform records — each verified directly with the issuing source." },
 ];
@@ -36,7 +36,7 @@ export const Route = createFileRoute("/trust-center")({
 const steps = [
   { i: UserCheck, t: "Candidate consent", d: "Every verification begins with explicit, granular consent from the candidate." },
   { i: Layers, t: "Record collection", d: "Candidates submit professional records — employment, education, identity — through a secure flow." },
-  { i: Building2, t: "Source verification", d: "Kairo's engine routes each record to the issuing source — employers, universities, identity registries." },
+  { i: Building2, t: "Source verification", d: "KairoID's engine routes each record to the issuing source — employers, universities, identity registries." },
   { i: FileCheck2, t: "Verification outcome", d: "Each record is marked verified, unverifiable, or flagged — with a full audit trail." },
   { i: Fingerprint, t: "Trust profile generation", d: "Verified records assemble into a portable Trust Profile that travels with the candidate." },
 ];
@@ -64,10 +64,10 @@ function Page() {
             Built on <span className="text-gradient-teal">transparency</span> and verification.
           </h1>
           <p className="mx-auto mt-6 text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-            Kairo helps organizations verify employment information while giving individuals ownership over their professional trust records.
+            KairoID helps organizations verify employment information while giving individuals ownership over their professional trust records.
           </p>
           <p className="mt-4 text-xs text-muted-foreground/80 max-w-xl mx-auto">
-            This page is maintained by Kairo to answer common questions about our verification methodology, privacy, and consent practices.
+            This page is maintained by KairoID to answer common questions about our verification methodology, privacy, and consent practices.
           </p>
         </div>
       </section>

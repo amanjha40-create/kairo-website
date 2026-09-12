@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import crypto from "node:crypto";
 import path from "node:path";
 import vm from "node:vm";
 import { createRequire } from "node:module";
@@ -21,6 +22,22 @@ const validSections = new Set([
   "troubleshooting",
   "contact-support",
 ]);
+
+test("the visible website brand uses the approved canonical KairoID lockup", () => {
+  const logoPath = path.join(repoRoot, "src/assets/kairoid-logo-primary.png");
+  const logoHash = crypto.createHash("sha256").update(fs.readFileSync(logoPath)).digest("hex");
+  const logoSource = fs.readFileSync(path.join(repoRoot, "src/components/Logo.tsx"), "utf8");
+  const footerSource = fs.readFileSync(
+    path.join(repoRoot, "src/components/site/SiteFooter.tsx"),
+    "utf8",
+  );
+
+  assert.equal(logoHash, "1c386d11e0c9dcbb4d67e99f9f5bffef779664b2c75452dedf2391f6e6aee5dc");
+  assert.match(logoSource, /alt="KairoID"/);
+  assert.match(logoSource, /width=\{728\}/);
+  assert.match(logoSource, /height=\{192\}/);
+  assert.match(footerSource, /Verify once\. Trusted everywhere\./);
+});
 
 function loadTsModule(filePath, { stripSiteUrlImport = false } = {}) {
   let source = fs.readFileSync(filePath, "utf8");
@@ -82,7 +99,7 @@ function extractHelpCenterPaths(source) {
 }
 
 function extractSupportPath(source) {
-  const match = source.match(/help-center\/contact-support/);
+  const match = source.match(/help-center\/contact-support|helpSupportUrl\s*\(/);
   return match ? "/help-center/contact-support" : null;
 }
 

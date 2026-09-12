@@ -228,7 +228,7 @@ function OrgVerificationBadge({ status }: { status: OrgVerificationStatus }) {
     "Verification Pending": {
       icon: Clock,
       className: "bg-warning/10 text-warning-foreground border-warning/30",
-      description: "Kairo is reviewing your organization. This typically takes a few business days.",
+      description: "KairoID is reviewing your organization. This typically takes a few business days.",
     },
     Verified: {
       icon: CheckCircle2,
@@ -444,7 +444,7 @@ function SecuritySection() {
 
   return (
     <div className="space-y-6">
-      <SectionCard title="Password" description="Update the password for your Kairo account.">
+      <SectionCard title="Password" description="Update the password for your KairoID account.">
         <div className="p-6">
           <Button variant="outline" className="rounded-xl" onClick={() => setPwOpen(true)}>Change password</Button>
         </div>
@@ -467,7 +467,7 @@ function SecuritySection() {
 
       <SectionCard
         title="Active sessions"
-        description="Devices currently signed in to your Kairo account."
+        description="Devices currently signed in to your KairoID account."
         action={
           <Button size="sm" variant="outline" className="rounded-lg h-8" onClick={() => setSignOutOpen(true)}>
             <LogOut className="h-3.5 w-3.5 mr-1.5" /> Sign out all other sessions

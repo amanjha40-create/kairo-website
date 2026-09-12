@@ -21,9 +21,9 @@ import {
 import { siteUrl } from "@/lib/domain-config";
 
 const PAGE_URL = siteUrl("/about");
-const PAGE_TITLE = "About Kairo — Building the Trust Layer for Modern Hiring";
+const PAGE_TITLE = "About KairoID — Building the Trust Layer for Modern Hiring";
 const PAGE_DESC =
-  "Kairo builds AI-powered verified identity infrastructure — replacing slow background checks with reusable, source-verified trust profiles.";
+  "KairoID builds AI-powered verified identity infrastructure — replacing slow background checks with reusable, source-verified trust profiles.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -150,13 +150,13 @@ function AboutPage() {
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28 lg:py-32 grid lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 items-center">
           <div>
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 backdrop-blur px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] shadow-soft">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" /> About Kairo
+              <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" /> About KairoID
             </div>
             <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.04]">
               Building the <span className="text-gradient-teal">trust layer</span> for modern hiring.
             </h1>
             <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-              Kairo helps companies verify candidates faster with trusted employment, education, identity, and background verification — all through one unified platform.
+              KairoID helps companies verify candidates faster with trusted employment, education, identity, and background verification — all through one unified platform.
             </p>
 
             <ul className="mt-8 grid sm:grid-cols-2 gap-3 max-w-xl">
@@ -254,10 +254,10 @@ function AboutPage() {
               <Sparkles className="h-3 w-3" /> Our story
             </div>
             <h2 className="mt-4 text-3xl md:text-5xl font-bold tracking-tight">
-              Why we built <span className="text-gradient-teal">Kairo.</span>
+              Why we built <span className="text-gradient-teal">KairoID.</span>
             </h2>
             <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
-              Hiring still runs on fragmented documents, manual calls, and unverifiable claims. Kairo replaces outdated verification workflows with a faster, trusted, and reusable infrastructure layer for modern hiring teams.
+              Hiring still runs on fragmented documents, manual calls, and unverifiable claims. KairoID replaces outdated verification workflows with a faster, trusted, and reusable infrastructure layer for modern hiring teams.
             </p>
           </div>
 
@@ -291,7 +291,7 @@ function AboutPage() {
               Built by operators who understand <span className="text-gradient-teal">hiring infrastructure.</span>
             </h2>
             <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed">
-              Kairo is being built to modernize trust and verification infrastructure for the next generation of hiring.
+              KairoID is being built to modernize trust and verification infrastructure for the next generation of hiring.
             </p>
           </div>
 
@@ -369,7 +369,7 @@ function AboutPage() {
           <div className="rounded-3xl border border-background/10 glass-dark p-10 md:p-14 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-premium">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold tracking-tight max-w-2xl">
-                See how Kairo transforms hiring verification.
+                See how KairoID transforms hiring verification.
               </h2>
               <p className="mt-3 text-background/70 max-w-xl">
                 Book a walkthrough tailored to your hiring volume and verification workflows.

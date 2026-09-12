@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PagePlaceholder } from "@/components/site/PagePlaceholder";
 
-const TITLE = "Pricing — Kairo";
-const DESC = "Simple pricing for the Kairo Trust Workspace. Full pricing details coming soon.";
+const TITLE = "Pricing — KairoID";
+const DESC = "Simple pricing for the KairoID Trust Workspace. Full pricing details coming soon.";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({

@@ -86,7 +86,7 @@ function PeoplePage() {
   return (
     <div>
       <PageHeader
-        eyebrow="Kairo Trust Workspace"
+        eyebrow="KairoID Trust Workspace"
         title="People"
         description="View candidates and professionals who have shared information with your organization."
         actions={

@@ -31,7 +31,7 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/app")({
   head: () => ({
     meta: [
-      { title: "Kairo Trust Workspace" },
+      { title: "KairoID Trust Workspace" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),

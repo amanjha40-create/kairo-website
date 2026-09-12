@@ -3,9 +3,9 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { siteUrl } from "@/lib/domain-config";
 
 const PAGE_URL = siteUrl("/privacy");
-const PAGE_TITLE = "Privacy Policy — Kairo";
+const PAGE_TITLE = "Privacy Policy — KairoID";
 const PAGE_DESC =
-  "How Kairo collects, uses, and protects personal data for verified professional identity and hiring workflows.";
+  "How KairoID collects, uses, and protects personal data for verified professional identity and hiring workflows.";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -35,7 +35,7 @@ function PrivacyPage() {
 
         <div className="prose-kairo space-y-10 text-[15px] leading-relaxed text-foreground/90">
           <Section title="1. Introduction">
-            Kairo ("we", "us") is building portable trust infrastructure, starting with
+            KairoID ("we", "us") is building portable trust infrastructure, starting with
             employment verification. This policy explains what personal information we collect,
             how we use it, the legal bases we rely on, and the rights available to you.
           </Section>
@@ -97,7 +97,7 @@ function PrivacyPage() {
           </Section>
 
           <Section title="11. Children">
-            Kairo is not directed to children under 18.
+            KairoID is not directed to children under 18.
           </Section>
 
           <Section title="12. Changes">
@@ -105,7 +105,7 @@ function PrivacyPage() {
           </Section>
 
           <Section title="13. Contact">
-            Kairo · Bengaluru, India ·{" "}
+            KairoID · Bengaluru, India ·{" "}
             <a href="mailto:contact@kairoid.com" className="text-primary underline-offset-4 hover:underline">contact@kairoid.com</a>
           </Section>
         </div>

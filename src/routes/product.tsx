@@ -6,7 +6,7 @@ import { PhoneFrame, productScreens } from "@/components/product/screens";
 import { Button } from "@/components/ui/button";
 import { HR_WORKSPACE_URL, urlLabel } from "@/lib/domain-config";
 
-const TITLE = "Product Overview — Kairo";
+const TITLE = "Product Overview — KairoID";
 const DESC = "Portable professional trust infrastructure — the Trust Passport, HR Workspace and Institution Workspace working together.";
 
 export const Route = createFileRoute("/product")({
@@ -34,7 +34,7 @@ function ArchitectureDiagram() {
       <div className="absolute -inset-6 sm:-inset-10 bg-gradient-to-tr from-primary/25 via-info/15 to-transparent blur-3xl rounded-full -z-10" />
       <div className="text-center">
         <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-primary">
-          <Network className="h-3 w-3" /> Kairo Trust Engine
+          <Network className="h-3 w-3" /> KairoID Trust Engine
         </div>
         <p className="mt-2 text-xs text-muted-foreground">The verification and consent layer connecting every workspace.</p>
       </div>
@@ -65,17 +65,17 @@ function ProductOverview() {
         eyebrow="Product Overview"
         title="One trust network."
         gradientWord="Three workspaces."
-        intro="Kairo is portable professional trust infrastructure — a Trust Passport owned by professionals, an HR Workspace for employers, and an Institution Workspace for credential issuers, all connected by consent."
+        intro="KairoID is portable professional trust infrastructure — a Trust Passport owned by professionals, an HR Workspace for employers, and an Institution Workspace for credential issuers, all connected by consent."
         right={<ArchitectureDiagram />}
         secondaryLabel="Explore the Trust Passport"
         secondaryTo="/trust-passport"
       />
 
       <Section
-        eyebrow="What is Kairo?"
+        eyebrow="What is KairoID?"
         title="A trust layer for"
         gradientWord="professional information."
-        intro="Kairo turns verified employment, education, identity and credential facts into a portable Trust Passport that professionals own and share with consent. Employers and institutions plug into the same network so trust is built once and reused everywhere."
+        intro="KairoID turns verified employment, education, identity and credential facts into a portable Trust Passport that professionals own and share with consent. Employers and institutions plug into the same network so trust is built once and reused everywhere."
       >
         <BenefitGrid
           columns={3}
@@ -92,11 +92,11 @@ function ProductOverview() {
         eyebrow="Platform Architecture"
         title="How the pieces"
         gradientWord="fit together."
-        intro="The Kairo Trust Engine handles verification, consent and portability. Three workspaces sit on top — one for each side of the trust relationship."
+        intro="The KairoID Trust Engine handles verification, consent and portability. Three workspaces sit on top — one for each side of the trust relationship."
       >
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {[
-            { i: Layers, t: "Kairo Trust Engine", d: "The underlying verification and consent layer." },
+            { i: Layers, t: "KairoID Trust Engine", d: "The underlying verification and consent layer." },
             { i: Fingerprint, t: "Trust Passport", d: "Portable verified profile for professionals." },
             { i: Building2, t: "HR Workspace", d: "Where employers receive and act on trust." },
             { i: GraduationCap, t: "Institution Workspace", d: "Where issuers verify and issue records." },
@@ -166,7 +166,7 @@ function ProductOverview() {
         eyebrow="Trust Infrastructure"
         title="Trust that"
         gradientWord="moves with people."
-        intro="Kairo's role is to make professional trust portable — verified once, owned for life, shared with consent. That's the infrastructure the modern workforce is missing."
+        intro="KairoID's role is to make professional trust portable — verified once, owned for life, shared with consent. That's the infrastructure the modern workforce is missing."
       >
         <div className="flex flex-wrap gap-3">
           <Button asChild size="lg" className="btn-premium rounded-xl h-12 px-6">

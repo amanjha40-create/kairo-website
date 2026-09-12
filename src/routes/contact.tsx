@@ -31,9 +31,9 @@ import {
 } from "@/lib/contact";
 
 const PAGE_URL = siteUrl("/contact");
-const PAGE_TITLE = "Contact Kairo — Book a Demo of AI Trust Infrastructure";
+const PAGE_TITLE = "Contact KairoID — Book a Demo of AI Trust Infrastructure";
 const PAGE_DESC =
-  "Talk to the Kairo team about AI-powered verified professional identity, portable trust profiles, and verified hiring at scale.";
+  "Talk to the KairoID team about AI-powered verified professional identity, portable trust profiles, and verified hiring at scale.";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -58,7 +58,7 @@ export const Route = createFileRoute("/contact")({
           description: PAGE_DESC,
           mainEntity: {
             "@type": "Organization",
-            name: "Kairo",
+            name: "KairoID",
             email: "contact@kairoid.com",
             telephone: "+91-8767299299",
             contactPoint: [

@@ -23,7 +23,7 @@ import {
 import { PhoneFrame, productScreens } from "@/components/product/screens";
 import { UNIVERSITY_URL, urlLabel } from "@/lib/domain-config";
 
-const TITLE = "For Institutions — Kairo";
+const TITLE = "For Institutions — KairoID";
 const DESC =
   "Universities, colleges and credential issuers verify education records, respond to requests, and issue trusted credentials into a professional's Trust Passport.";
 
@@ -140,7 +140,7 @@ function ForInstitutionsPage() {
         eyebrow="For Institutions"
         title="Credentials, verified"
         gradientWord="at the source."
-        intro="Kairo helps universities, colleges and credential issuers verify education records, respond to verification requests, and issue verified credentials directly into a professional's Trust Passport."
+        intro="KairoID helps universities, colleges and credential issuers verify education records, respond to verification requests, and issue verified credentials directly into a professional's Trust Passport."
         right={<InstitutionDashboardMock />}
         ctaLabel="Book a demo"
         ctaTo="/contact"
@@ -152,7 +152,7 @@ function ForInstitutionsPage() {
         eyebrow="Education Is Part Of Professional Trust"
         title="Every degree"
         gradientWord="is a trust anchor."
-        intro="Education records are among the most-verified facts in any professional's career — often re-verified with the issuing institution for every new role. Kairo makes those records portable, verified at the source, and reusable across a professional's lifetime."
+        intro="Education records are among the most-verified facts in any professional's career — often re-verified with the issuing institution for every new role. KairoID makes those records portable, verified at the source, and reusable across a professional's lifetime."
       >
         <BenefitGrid
           items={[
@@ -216,7 +216,7 @@ function ForInstitutionsPage() {
         eyebrow="Respond To Verification Requests"
         title="An inbox for"
         gradientWord="credential verification."
-        body="Employers and other institutions send credential verification requests through Kairo. Every request lands in a single inbox with the individual's consent attached — approve, decline or add context."
+        body="Employers and other institutions send credential verification requests through KairoID. Every request lands in a single inbox with the individual's consent attached — approve, decline or add context."
         bullets={[
           {
             icon: Inbox,
@@ -268,7 +268,7 @@ function ForInstitutionsPage() {
       <Section
         eyebrow="Benefits"
         title="Why institutions"
-        gradientWord="join Kairo."
+        gradientWord="join KairoID."
       >
         <BenefitGrid
           items={[

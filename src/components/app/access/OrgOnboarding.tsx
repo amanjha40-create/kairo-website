@@ -104,10 +104,10 @@ export function OrgOnboarding() {
                     <Sparkles className="h-3.5 w-3.5" /> Welcome
                   </div>
                   <h1 className="text-[34px] sm:text-[42px] font-semibold tracking-tight leading-[1.05] text-foreground">
-                    Welcome to Kairo Trust Workspace.
+                    Welcome to KairoID Trust Workspace.
                   </h1>
                   <p className="mt-4 text-base text-muted-foreground max-w-xl leading-relaxed">
-                    Kairo Trust Workspace helps your organization invite candidates, manage consented Trust Passport access, and respond to employment verification requests.
+                    KairoID Trust Workspace helps your organization invite candidates, manage consented Trust Passport access, and respond to employment verification requests.
                   </p>
                   <div className="mt-8 grid sm:grid-cols-2 gap-3">
                     <button

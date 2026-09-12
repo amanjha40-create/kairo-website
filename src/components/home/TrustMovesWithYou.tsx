@@ -105,7 +105,7 @@ function TodayColumn() {
   );
 }
 
-/* ---------- WITH KAIRO column ---------- */
+/* ---------- WITH KairoID column ---------- */
 
 function KairoColumn() {
   const reduce = useReducedMotion();
@@ -118,7 +118,7 @@ function KairoColumn() {
 
       <div className="relative flex items-center justify-between">
         <div className="text-[10px] font-bold uppercase tracking-[0.22em] text-primary">
-          With Kairo
+          With KairoID
         </div>
         <div className="inline-flex items-center gap-1.5 rounded-full border border-success/25 bg-success/10 px-2.5 py-0.5 text-[10px] font-semibold text-success">
           <ShieldCheck className="h-3 w-3" /> Verified once

@@ -129,7 +129,7 @@ function InvitationDetailPage() {
             </div>
           </SectionCard>
 
-          <SectionCard title="Requested verifications" description="Kairo will ask the candidate to consent to each of these.">
+          <SectionCard title="Requested verifications" description="KairoID will ask the candidate to consent to each of these.">
             <div className="p-5 flex flex-wrap gap-2">
               {inv.requestedVerifications.map((t) => (
                 <Badge key={t} variant="outline" className="rounded-full px-3 py-1 text-xs font-normal">{t}</Badge>
@@ -148,7 +148,7 @@ function InvitationDetailPage() {
               <div className="rounded-xl border border-border/60 bg-foreground/[0.02] p-4 text-sm text-muted-foreground flex gap-3">
                 <ShieldCheck className="h-4 w-4 text-primary shrink-0 mt-0.5" />
                 <div>
-                  {inv.sentBy} has requested to verify {inv.requestedVerifications.length} categories on your Kairo Trust Passport. You control what to share. You can decline or withdraw consent at any time.
+                  {inv.sentBy} has requested to verify {inv.requestedVerifications.length} categories on your KairoID Trust Passport. You control what to share. You can decline or withdraw consent at any time.
                 </div>
               </div>
             </div>

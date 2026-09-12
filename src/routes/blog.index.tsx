@@ -23,7 +23,7 @@ import { TrustShield } from "@/components/trust/TrustShield";
 import { siteUrl } from "@/lib/domain-config";
 
 const URL = siteUrl("/blog");
-const TITLE = "Kairo Blog — Insights on Trust Infrastructure";
+const TITLE = "KairoID Blog — Insights on Trust Infrastructure";
 const DESC =
   "Research, hiring trends, verification innovation, reusable trust identities, and the future of professional reputation.";
 
@@ -46,7 +46,7 @@ export const Route = createFileRoute("/blog/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Blog",
-          name: "Kairo Blog",
+          name: "KairoID Blog",
           url: URL,
           description: DESC,
           blogPost: posts.map((p) => ({
@@ -201,7 +201,7 @@ function BlogHero() {
       <div className="mx-auto max-w-7xl px-6 py-20 md:py-28 lg:py-32 grid lg:grid-cols-[1.05fr_1fr] gap-12 lg:gap-16 items-center">
         <div>
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 backdrop-blur px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] shadow-soft">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" /> Kairo Journal
+            <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" /> KairoID Journal
           </div>
           <h1 className="mt-6 text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.04]">
             Insights on <span className="text-gradient-teal">trust infrastructure.</span>

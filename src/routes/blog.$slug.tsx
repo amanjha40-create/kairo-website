@@ -16,7 +16,7 @@ export const Route = createFileRoute("/blog/$slug")({
     const url = siteUrl(`/blog/${params.slug}`);
     return {
       meta: [
-        { title: `${post.title} | Kairo` },
+        { title: `${post.title} | KairoID` },
         { name: "description", content: post.description },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.description },
@@ -37,8 +37,8 @@ export const Route = createFileRoute("/blog/$slug")({
             headline: post.title,
             description: post.description,
             datePublished: post.date,
-            author: { "@type": "Organization", name: "Kairo" },
-            publisher: { "@type": "Organization", name: "Kairo", url: siteUrl("/") },
+            author: { "@type": "Organization", name: "KairoID" },
+            publisher: { "@type": "Organization", name: "KairoID", url: siteUrl("/") },
             mainEntityOfPage: url,
             keywords: post.tags.join(", "),
           }),
@@ -100,7 +100,7 @@ function PostPage() {
       <section className="border-t border-border bg-background">
         <div className="mx-auto max-w-3xl px-6 py-12">
           <div className="rounded-2xl border border-border bg-gradient-to-br from-primary/[0.06] to-transparent p-6 md:p-8">
-            <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">Explore Kairo</div>
+            <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">Explore KairoID</div>
             <h2 className="mt-2 text-xl md:text-2xl font-semibold tracking-tight">
               Put portable trust to work for your hiring team.
             </h2>
@@ -109,7 +109,7 @@ function PostPage() {
             </p>
             <ul className="mt-5 grid gap-2 sm:grid-cols-2">
               {[
-                { to: "/how-it-works" as const, label: "How Kairo works" },
+                { to: "/how-it-works" as const, label: "How KairoID works" },
                 { to: "/portable-trust-profiles" as const, label: "Portable Trust Profiles" },
                 { to: "/ai-background-verification" as const, label: "AI Verification Engine" },
                 { to: "/pricing" as const, label: "Pricing" },

@@ -115,7 +115,7 @@ export const posts: BlogPost[] = [
         "Reference and reputation checks (optional)",
       ] },
       { type: "h2", text: "How background verification actually works" },
-      { type: "p", text: "A verifier collects the candidate's consent, then contacts each source — past employers, universities, government databases — to confirm the claim. Traditional vendors do this manually over email and phone. AI-powered platforms like Kairo route requests automatically, parse responses, and flag anomalies in hours instead of weeks." },
+      { type: "p", text: "A verifier collects the candidate's consent, then contacts each source — past employers, universities, government databases — to confirm the claim. Traditional vendors do this manually over email and phone. AI-powered platforms like KairoID route requests automatically, parse responses, and flag anomalies in hours instead of weeks." },
       { type: "h2", text: "How long does a background check take?" },
       { type: "p", text: "Legacy BGV vendors quote 5–10 business days and often take longer. AI-orchestrated verification typically completes in under 2 days — and if the candidate already has a reusable Trust Profile, it can be instant." },
       { type: "h2", text: "Background check vs. background verification" },

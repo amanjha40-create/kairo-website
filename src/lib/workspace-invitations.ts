@@ -318,7 +318,7 @@ function buildResult(t: RequestVerificationType, status: VerificationStatus, whe
       discrepancies: [],
       exceptions: [],
       unableToVerify: [],
-      source: t === "Employment" ? "Employer records · Northstar Labs" : "Kairo Trust Engine",
+      source: t === "Employment" ? "Employer records · Northstar Labs" : "KairoID Trust Engine",
       reference: `RES-${Math.floor(Math.random() * 90000) + 10000}`,
     };
   }
@@ -402,14 +402,14 @@ export function toUserFacingStatus(s: VerificationStatus, consent: ConsentStatus
   return "In Verification";
 }
 
-export function nextActionFor(s: UserFacingRequestStatus): { text: string; owner: "Candidate" | "Kairo" | "Organization" | "None" } {
+export function nextActionFor(s: UserFacingRequestStatus): { text: string; owner: "Candidate" | "KairoID" | "Organization" | "None" } {
   switch (s) {
     case "Waiting for Candidate Acceptance":
       return { text: "Candidate must accept the invitation", owner: "Candidate" };
     case "Waiting for Candidate Information":
       return { text: "Candidate must submit information", owner: "Candidate" };
     case "In Verification":
-      return { text: "Kairo verification in progress", owner: "Kairo" };
+      return { text: "KairoID verification in progress", owner: "KairoID" };
     case "Clarification Required":
       return { text: "Organization should review the clarification", owner: "Organization" };
     case "Completed":

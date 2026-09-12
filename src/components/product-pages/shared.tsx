@@ -204,7 +204,7 @@ export function FinalCTA({
   eyebrow = "Ready to get started?",
   title = "Professional trust",
   gradientWord = "should move with you.",
-  body = "Whether you're building your professional reputation or hiring with confidence, Kairo makes trusted professional information portable, reusable, and always shared with your consent.",
+  body = "Whether you're building your professional reputation or hiring with confidence, KairoID makes trusted professional information portable, reusable, and always shared with your consent.",
   primary = { label: "Book a demo", to: "/contact" },
   secondary,
 }: {

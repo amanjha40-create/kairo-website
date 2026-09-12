@@ -34,18 +34,18 @@ import {
 } from "@/lib/support";
 
 const URL = siteUrl("/help-center");
-const TITLE = "Kairo Help Centre — Candidate, HR, Institution, Security & Support";
+const TITLE = "KairoID Help Centre — Candidate, HR, Institution, Security & Support";
 const DESC =
-  "Official Kairo Help Centre for Candidate, HR Workspace, Institution Workspace, account security, troubleshooting, and support.";
+  "Official KairoID Help Centre for Candidate, HR Workspace, Institution Workspace, account security, troubleshooting, and support.";
 
 const faqs: SeoFaq[] = [
   {
-    q: "What is the Kairo Help Centre?",
-    a: "It is the official Kairo support experience for Candidate, HR Workspace, Institution Workspace, account security, and troubleshooting.",
+    q: "What is the KairoID Help Centre?",
+    a: "It is the official KairoID support experience for Candidate, HR Workspace, Institution Workspace, account security, and troubleshooting.",
   },
   {
     q: "Where do I go if I forgot my password or did not receive an OTP?",
-    a: "Use the Account & Security section or open Contact Support for direct help from Kairo.",
+    a: "Use the Account & Security section or open Contact Support for direct help from KairoID.",
   },
   {
     q: "Where can HR teams troubleshoot Trust Invitations?",
@@ -92,7 +92,7 @@ function HelpCenterHome() {
         <div className="absolute inset-0 bg-grid-faint opacity-60 -z-10" />
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-28">
           <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-soft">
-            <LifeBuoy className="h-3.5 w-3.5" /> Official Kairo Help Centre
+            <LifeBuoy className="h-3.5 w-3.5" /> Official KairoID Help Centre
           </div>
           <div className="mt-6 grid gap-10 lg:grid-cols-[1.5fr_0.9fr] lg:items-start">
             <div>
@@ -101,7 +101,7 @@ function HelpCenterHome() {
               </h1>
               <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
                 Start with the product you use, search by the problem you are seeing, or open
-                Contact Support if you need direct help from Kairo.
+                Contact Support if you need direct help from KairoID.
               </p>
 
               <div className="mt-8 relative max-w-3xl">
@@ -141,10 +141,10 @@ function HelpCenterHome() {
               <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
                 Need help right now?
               </div>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight">Contact Kairo Support</h2>
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight">Contact KairoID Support</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 Use the support hub for product issues, onboarding help, or account-security
-                concerns. Never send Kairo your password, OTP, access token, refresh token, or a
+                concerns. Never send KairoID your password, OTP, access token, refresh token, or a
                 private key.
               </p>
               <div className="mt-5 space-y-3 text-sm">
@@ -195,7 +195,7 @@ function HelpCenterHome() {
             </div>
             <p className="max-w-xl text-sm text-muted-foreground">
               The Help Centre is organized by product and by task, so first-time users can choose
-              the right route without learning Kairo jargon first.
+              the right route without learning KairoID jargon first.
             </p>
           </div>
 
@@ -364,7 +364,7 @@ function HelpCenterHome() {
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                 Try a different keyword, browse by product, or open Contact Support if you need help
-                from the Kairo team.
+                from the KairoID team.
               </p>
               <div className="mt-5 flex flex-wrap justify-center gap-3">
                 <Button asChild className="btn-premium rounded-xl">

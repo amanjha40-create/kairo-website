@@ -73,7 +73,7 @@ export const helpSections: HelpSectionMeta[] = [
   {
     id: "contact-support",
     title: "Contact Support",
-    summary: "Call, email, and submit a support request to the Kairo team.",
+    summary: "Call, email, and submit a support request to the KairoID team.",
     audience: ["candidate", "hr", "institution", "security"],
   },
 ];
@@ -81,20 +81,20 @@ export const helpSections: HelpSectionMeta[] = [
 export const helpArticles: HelpArticle[] = [
   {
     slug: "candidate-getting-started",
-    title: "Create your Kairo account and finish onboarding",
-    summary: "What Kairo is, how signup works, and what to expect during candidate onboarding.",
+    title: "Create your KairoID account and finish onboarding",
+    summary: "What KairoID is, how signup works, and what to expect during candidate onboarding.",
     audience: ["candidate"],
     section: "candidate",
     category: "Getting started",
     readMinutes: 4,
     keywords: ["kairo", "create account", "signup", "login", "onboarding", "getting started"],
-    whoItsFor: "Candidates using Kairo for the first time.",
+    whoItsFor: "Candidates using KairoID for the first time.",
     whatThisMeans:
-      "Kairo helps you build a Trust Passport from verified professional information. Your onboarding flow collects your account details and prepares you for verification, sharing, and future invitations.",
+      "KairoID helps you build a Trust Passport from verified professional information. Your onboarding flow collects your account details and prepares you for verification, sharing, and future invitations.",
     steps: [
       "Create your account with your email address and complete phone verification when requested.",
       "Verify your email if the app asks you to confirm your inbox before continuing.",
-      "Finish the guided onboarding steps so Kairo can personalize your candidate experience.",
+      "Finish the guided onboarding steps so KairoID can personalize your candidate experience.",
       "Add your first career or education record when you are ready to start building your Trust Passport.",
     ],
     whatHappensNext: [
@@ -123,7 +123,7 @@ export const helpArticles: HelpArticle[] = [
     slug: "candidate-email-phone-verification",
     title: "Verify your email address and phone number",
     summary:
-      "How Kairo email and phone verification works, including what to check if the OTP does not arrive.",
+      "How KairoID email and phone verification works, including what to check if the OTP does not arrive.",
     audience: ["candidate", "security"],
     section: "candidate",
     category: "Getting started",
@@ -138,15 +138,15 @@ export const helpArticles: HelpArticle[] = [
     ],
     whoItsFor: "Candidates who are confirming their contact details.",
     whatThisMeans:
-      "Kairo uses verified contact details to secure your account and support important actions like password reset and OTP login challenges.",
+      "KairoID uses verified contact details to secure your account and support important actions like password reset and OTP login challenges.",
     steps: [
-      "Enter the email address or phone number requested by Kairo.",
+      "Enter the email address or phone number requested by KairoID.",
       "Wait for the verification message to arrive and enter the code exactly as shown.",
       "If a code expires, request a new code instead of reusing the old one.",
       "Once verified, continue onboarding or return to the screen that asked for the check.",
     ],
     whatHappensNext: [
-      "Kairo stores only the verified contact route needed for future account-security flows.",
+      "KairoID stores only the verified contact route needed for future account-security flows.",
       "You may be asked to verify again if you change your contact details later.",
     ],
     commonProblems: [
@@ -174,7 +174,7 @@ export const helpArticles: HelpArticle[] = [
     keywords: ["forgot password", "reset password", "reset link", "login failed", "password help"],
     whoItsFor: "Candidates who cannot sign in or need to reset their password.",
     whatThisMeans:
-      "Password reset is the safe recovery path when you still control your email or phone route. Kairo support should never ask you to send your password or OTP.",
+      "Password reset is the safe recovery path when you still control your email or phone route. KairoID support should never ask you to send your password or OTP.",
     steps: [
       "Use the Forgot password flow from the login page.",
       "Open the reset email or paste the reset token into the reset page if needed.",
@@ -226,8 +226,8 @@ export const helpArticles: HelpArticle[] = [
       "If you need to correct an unverified record, edit the draft directly from the record detail screen.",
     ],
     whatHappensNext: [
-      "Once verified, Kairo may protect parts of the record so trust-critical facts are not silently changed.",
-      "If a verified fact needs correction, Kairo may require a formal correction cycle instead of a direct edit.",
+      "Once verified, KairoID may protect parts of the record so trust-critical facts are not silently changed.",
+      "If a verified fact needs correction, KairoID may require a formal correction cycle instead of a direct edit.",
     ],
     commonProblems: [
       {
@@ -250,7 +250,7 @@ export const helpArticles: HelpArticle[] = [
   {
     slug: "candidate-resume-import",
     title: "Import a resume and review the parsed result",
-    summary: "How resume upload, processing, parsing, and manual review work in Kairo.",
+    summary: "How resume upload, processing, parsing, and manual review work in KairoID.",
     audience: ["candidate", "troubleshooting"],
     section: "candidate",
     category: "Resume",
@@ -261,7 +261,7 @@ export const helpArticles: HelpArticle[] = [
       "Resume import is a starting point, not a final source of truth. You still need to review the parsed data before relying on it for verification or sharing.",
     steps: [
       "Upload a supported resume file from the resume import screen.",
-      "Wait while Kairo processes the file and extracts the likely records.",
+      "Wait while KairoID processes the file and extracts the likely records.",
       "Review the parsed result carefully before saving or using the imported facts.",
       "Correct anything that is incomplete or inaccurate before submitting for verification.",
     ],
@@ -291,7 +291,7 @@ export const helpArticles: HelpArticle[] = [
     slug: "candidate-verification-basics",
     title: "Submit a record for verification and understand the statuses",
     summary:
-      "What verification means, which evidence to upload, and how to read the status changes in Kairo.",
+      "What verification means, which evidence to upload, and how to read the status changes in KairoID.",
     audience: ["candidate"],
     section: "candidate",
     category: "Verification",
@@ -305,29 +305,29 @@ export const helpArticles: HelpArticle[] = [
       "verified",
       "rejected",
     ],
-    whoItsFor: "Candidates preparing employment or education records for Kairo verification.",
+    whoItsFor: "Candidates preparing employment or education records for KairoID verification.",
     whatThisMeans:
-      "Verification is how Kairo turns a self-entered fact into a trusted one. Status changes tell you where the request is in review, outreach, or correction.",
+      "Verification is how KairoID turns a self-entered fact into a trusted one. Status changes tell you where the request is in review, outreach, or correction.",
     steps: [
       "Open the relevant record and start the verification flow.",
-      "Upload the evidence or verification contact details Kairo requests for that record type.",
+      "Upload the evidence or verification contact details KairoID requests for that record type.",
       "Submit the request and monitor its timeline in the Verify area.",
-      "If Kairo asks for corrections, update only the requested parts and resubmit the record.",
+      "If KairoID asks for corrections, update only the requested parts and resubmit the record.",
     ],
     whatHappensNext: [
-      "A request may move through pending Kairo review, in progress, correction requested, unable to verify, rejected, or verified depending on the evidence and source response.",
+      "A request may move through pending KairoID review, in progress, correction requested, unable to verify, rejected, or verified depending on the evidence and source response.",
       "Verified facts can later appear inside your Trust Passport and may be shareable with your consent.",
     ],
     commonProblems: [
       {
         title: "Verification is still pending",
         detail:
-          "Some requests wait on Kairo review or the external source. Use the verification-pending article if the state looks stale.",
+          "Some requests wait on KairoID review or the external source. Use the verification-pending article if the state looks stale.",
       },
       {
-        title: "Kairo requested corrections",
+        title: "KairoID requested corrections",
         detail:
-          "Do not create a new verification request unless Kairo explicitly tells you to. Update the requested evidence or contact and resubmit.",
+          "Do not create a new verification request unless KairoID explicitly tells you to. Update the requested evidence or contact and resubmit.",
       },
     ],
     related: [
@@ -340,7 +340,7 @@ export const helpArticles: HelpArticle[] = [
     slug: "candidate-evidence-help",
     title: "Choose the right evidence for verification",
     summary:
-      "What to upload, how Kairo uses the files, and what happens when an evidence upload fails.",
+      "What to upload, how KairoID uses the files, and what happens when an evidence upload fails.",
     audience: ["candidate", "troubleshooting"],
     section: "candidate",
     category: "Verification",
@@ -354,7 +354,7 @@ export const helpArticles: HelpArticle[] = [
     ],
     whoItsFor: "Candidates who need to attach supporting documents to a verification request.",
     whatThisMeans:
-      "Evidence helps Kairo review a claim, but it does not automatically replace source verification. Upload only the files relevant to the exact record you are verifying.",
+      "Evidence helps KairoID review a claim, but it does not automatically replace source verification. Upload only the files relevant to the exact record you are verifying.",
     steps: [
       "Check the record type and only upload documents directly connected to that claim.",
       "Use clear, complete files rather than cropped screenshots where possible.",
@@ -362,7 +362,7 @@ export const helpArticles: HelpArticle[] = [
       "Return to the verification status page to confirm the evidence is attached.",
     ],
     whatHappensNext: [
-      "Kairo may review the file, ask for corrections, or move the request deeper into source verification.",
+      "KairoID may review the file, ask for corrections, or move the request deeper into source verification.",
       "Evidence that is incomplete or unreadable may slow the request or trigger a correction cycle.",
     ],
     commonProblems: [
@@ -373,7 +373,7 @@ export const helpArticles: HelpArticle[] = [
       {
         title: "I am worried about how my file will be used",
         detail:
-          "Kairo should only use the file for the related verification workflow. Do not upload unrelated sensitive material.",
+          "KairoID should only use the file for the related verification workflow. Do not upload unrelated sensitive material.",
       },
     ],
     related: [
@@ -401,10 +401,10 @@ export const helpArticles: HelpArticle[] = [
     whoItsFor:
       "Candidates who were invited by an organization to verify or share trust-related information.",
     whatThisMeans:
-      "A Trust Invitation is a secure request from an organization asking you to participate in a Kairo trust workflow. Accepting it may create or continue a verification process tied to your account.",
+      "A Trust Invitation is a secure request from an organization asking you to participate in a KairoID trust workflow. Accepting it may create or continue a verification process tied to your account.",
     steps: [
       "Open the secure invitation link and review the requesting organization, purpose, and requested checks.",
-      "Log in with the correct Kairo candidate account or create one if you do not have access yet.",
+      "Log in with the correct KairoID candidate account or create one if you do not have access yet.",
       "Accept the invitation only after confirming the request matches your real relationship with that organization.",
       "Continue into the Verify area or other requested next step after acceptance succeeds.",
     ],
@@ -421,7 +421,7 @@ export const helpArticles: HelpArticle[] = [
       {
         title: "I am not sure why I received this",
         detail:
-          "Check the organization name and request purpose before accepting. If it looks wrong, use Kairo support instead of proceeding.",
+          "Check the organization name and request purpose before accepting. If it looks wrong, use KairoID support instead of proceeding.",
       },
     ],
     related: [
@@ -454,7 +454,7 @@ export const helpArticles: HelpArticle[] = [
       "If the email never arrived, check delivery and the organization's resend status before creating a brand-new workflow.",
     ],
     whatHappensNext: [
-      "Kairo or the inviting organization may resend the invitation if the workflow still supports it.",
+      "KairoID or the inviting organization may resend the invitation if the workflow still supports it.",
       "If the invitation was already accepted, you should usually continue from the resulting verification or workflow state instead of reopening the same link.",
     ],
     commonProblems: [
@@ -521,7 +521,7 @@ export const helpArticles: HelpArticle[] = [
   },
   {
     slug: "candidate-notifications",
-    title: "Understand Kairo notifications and missing targets",
+    title: "Understand KairoID notifications and missing targets",
     summary:
       "What notification states mean and what to do if a notification opens a stale or missing target.",
     audience: ["candidate", "troubleshooting"],
@@ -572,18 +572,18 @@ export const helpArticles: HelpArticle[] = [
       "organization setup",
       "employer help",
     ],
-    whoItsFor: "HR and employer users onboarding into Kairo.",
+    whoItsFor: "HR and employer users onboarding into KairoID.",
     whatThisMeans:
       "The HR Workspace is where your organization manages Trust Invitations, people, verification requests, and team access. Early setup should stay clean so delivery and verification workflows remain trustworthy.",
     steps: [
       "Log in with the correct organization-linked HR account.",
-      "Review your workspace settings and confirm the organization identity shown by Kairo.",
+      "Review your workspace settings and confirm the organization identity shown by KairoID.",
       "Invite or add the right team members before launching live workflows.",
       "Send your first controlled invitation or review your first inbound verification from the workspace.",
     ],
     whatHappensNext: [
       "Your workspace becomes the source of truth for people, delivery, and verification states tied to that organization.",
-      "If onboarding is incomplete, use Kairo onboarding help rather than improvising production behavior.",
+      "If onboarding is incomplete, use KairoID onboarding help rather than improvising production behavior.",
     ],
     commonProblems: [
       {
@@ -663,7 +663,7 @@ export const helpArticles: HelpArticle[] = [
     ],
     whoItsFor: "HR teams sending Trust Invitations to candidates.",
     whatThisMeans:
-      "Trust Invitations are the controlled way to request candidate participation in Kairo trust workflows. Delivery state and invitation state both matter, and they are not the same thing.",
+      "Trust Invitations are the controlled way to request candidate participation in KairoID trust workflows. Delivery state and invitation state both matter, and they are not the same thing.",
     steps: [
       "Create the invitation with the correct candidate identity and requested data scope.",
       "Review the purpose, expiry, and destination before sending.",
@@ -752,7 +752,7 @@ export const helpArticles: HelpArticle[] = [
     ],
     whoItsFor: "HR users responding to employment verification workflows.",
     whatThisMeans:
-      "An employment verification request asks your organization to confirm facts that matter to trust. Your response should be truthful, source-based, and limited to the fields Kairo requests.",
+      "An employment verification request asks your organization to confirm facts that matter to trust. Your response should be truthful, source-based, and limited to the fields KairoID requests.",
     steps: [
       "Open the verification request and review the candidate claim and requested fields.",
       "Confirm only what your organization can truthfully verify from source records.",
@@ -760,8 +760,8 @@ export const helpArticles: HelpArticle[] = [
       "Submit the response once and confirm the status changed as expected.",
     ],
     whatHappensNext: [
-      "Kairo records the response and advances the verification workflow for the candidate.",
-      "Some workflows may still continue into Kairo review before they become fully verified.",
+      "KairoID records the response and advances the verification workflow for the candidate.",
+      "Some workflows may still continue into KairoID review before they become fully verified.",
     ],
     commonProblems: [
       {
@@ -798,7 +798,7 @@ export const helpArticles: HelpArticle[] = [
       "remove access",
       "workspace access",
     ],
-    whoItsFor: "HR organizations managing multiple Kairo users.",
+    whoItsFor: "HR organizations managing multiple KairoID users.",
     whatThisMeans:
       "Team access should be deliberate. The wrong role can block verification work or expose the wrong organization state to the wrong person.",
     steps: [
@@ -840,17 +840,17 @@ export const helpArticles: HelpArticle[] = [
       "education verification",
     ],
     whoItsFor:
-      "Institution or university teams responding to Kairo education verification workflows.",
+      "Institution or university teams responding to KairoID education verification workflows.",
     whatThisMeans:
       "The Institution Workspace is where your team reviews education requests, evidence, and candidate claims without exposing data beyond the allowed contract.",
     steps: [
       "Log in with the correct institution-linked account.",
       "Confirm the institution identity and team access before using live requests.",
       "Review the incoming request views and public verification link behavior.",
-      "Use onboarding help if your team is new to the Kairo workflow.",
+      "Use onboarding help if your team is new to the KairoID workflow.",
     ],
     whatHappensNext: [
-      "Your institution can respond to public or authenticated verification requests according to the current Kairo workflow.",
+      "Your institution can respond to public or authenticated verification requests according to the current KairoID workflow.",
       "Incorrect access or mismatched organization context should be treated as an account-access concern.",
     ],
     commonProblems: [
@@ -897,7 +897,7 @@ export const helpArticles: HelpArticle[] = [
     ],
     whatHappensNext: [
       "The link may become terminal after a completed response depending on the workflow.",
-      "If the request is no longer usable, Kairo should not leak extra information through the public route.",
+      "If the request is no longer usable, KairoID should not leak extra information through the public route.",
     ],
     commonProblems: [
       {
@@ -939,7 +939,7 @@ export const helpArticles: HelpArticle[] = [
       "Submit the response once and confirm the request moves to its next workflow state.",
     ],
     whatHappensNext: [
-      "Kairo records the response and advances the downstream verification review.",
+      "KairoID records the response and advances the downstream verification review.",
       "Duplicate submission attempts should not create multiple conflicting responses.",
     ],
     commonProblems: [
@@ -978,7 +978,7 @@ export const helpArticles: HelpArticle[] = [
     ],
     whoItsFor: "Institution users reviewing request context around education verification.",
     whatThisMeans:
-      "Institution workflows should expose only the evidence and timeline information that is allowed by Kairo's contract. You should not need a full candidate passport to answer the request truthfully.",
+      "Institution workflows should expose only the evidence and timeline information that is allowed by KairoID's contract. You should not need a full candidate passport to answer the request truthfully.",
     steps: [
       "Review the candidate claim fields first.",
       "Open the permitted evidence items if the request includes them.",
@@ -1020,9 +1020,9 @@ export const helpArticles: HelpArticle[] = [
       "data exposure",
       "urgent support",
     ],
-    whoItsFor: "Any Kairo user with a potential security or account-access issue.",
+    whoItsFor: "Any KairoID user with a potential security or account-access issue.",
     whatThisMeans:
-      "Security and access concerns should not be treated like a normal FAQ. The fastest safe path is to stop risky actions, avoid sharing secrets, and contact Kairo through the dedicated support route.",
+      "Security and access concerns should not be treated like a normal FAQ. The fastest safe path is to stop risky actions, avoid sharing secrets, and contact KairoID through the dedicated support route.",
     steps: [
       "Stop using the affected session if you believe the account or organization context is wrong.",
       "Do not send your password, OTP, access token, refresh token, private key, or raw secure link to anyone.",
@@ -1030,7 +1030,7 @@ export const helpArticles: HelpArticle[] = [
       "Change your password if you still control the account and the issue appears limited to your own login.",
     ],
     whatHappensNext: [
-      "Kairo support can triage the access concern using the safe metadata you provide.",
+      "KairoID support can triage the access concern using the safe metadata you provide.",
       "Some cases may require organization-side access review before the normal workflow can resume.",
     ],
     commonProblems: [
@@ -1069,11 +1069,11 @@ export const helpArticles: HelpArticle[] = [
       "Confirm the email address or phone number shown on screen is correct.",
       "Wait briefly for propagation before requesting another OTP.",
       "Use the newest OTP only. Older codes may already be expired or invalidated.",
-      "If repeated attempts fail, contact Kairo support and share only safe context such as product and route.",
+      "If repeated attempts fail, contact KairoID support and share only safe context such as product and route.",
     ],
     whatHappensNext: [
       "A fresh OTP should replace the older one when a resend succeeds.",
-      "If delivery remains broken, Kairo support can investigate the channel without needing your secret code.",
+      "If delivery remains broken, KairoID support can investigate the channel without needing your secret code.",
     ],
     commonProblems: [
       {
@@ -1084,7 +1084,7 @@ export const helpArticles: HelpArticle[] = [
       {
         title: "I want to send the OTP to support",
         detail:
-          "Do not do that. Kairo should never need your OTP to diagnose the delivery problem.",
+          "Do not do that. KairoID should never need your OTP to diagnose the delivery problem.",
       },
     ],
     related: ["candidate-email-phone-verification", "candidate-password-reset", "contact-support"],
@@ -1098,17 +1098,17 @@ export const helpArticles: HelpArticle[] = [
     category: "Security",
     readMinutes: 3,
     keywords: ["lost email", "work email access", "organization access", "cannot login"],
-    whoItsFor: "Users who can no longer access the email account tied to Kairo.",
+    whoItsFor: "Users who can no longer access the email account tied to KairoID.",
     whatThisMeans:
       "Loss of an organization email can affect password reset, onboarding, invitation receipt, and access review. This is an identity and access problem, not just a UI bug.",
     steps: [
       "Do not ask someone else to log in for you or forward sensitive links.",
       "Use the support request flow and choose the security or account access concern category.",
       "Provide safe identifying context such as your public user ID, organization ID, or route if you have them.",
-      "Wait for Kairo to advise the correct recovery path before taking further action.",
+      "Wait for KairoID to advise the correct recovery path before taking further action.",
     ],
     whatHappensNext: [
-      "Kairo may need to verify ownership or organization context before changing access-related details.",
+      "KairoID may need to verify ownership or organization context before changing access-related details.",
       "Normal password reset may not be sufficient if the trusted contact route itself is no longer yours.",
     ],
     commonProblems: [
@@ -1145,7 +1145,7 @@ export const helpArticles: HelpArticle[] = [
     ],
     whatHappensNext: [
       "You should still be able to continue onboarding manually even if resume import is imperfect.",
-      "Kairo support can inspect the failure without needing the whole resume in the initial request.",
+      "KairoID support can inspect the failure without needing the whole resume in the initial request.",
     ],
     commonProblems: [
       {
@@ -1173,15 +1173,15 @@ export const helpArticles: HelpArticle[] = [
     keywords: ["verification pending", "in progress", "stuck review", "status taking long"],
     whoItsFor: "Users trying to understand whether a verification status is normal or stale.",
     whatThisMeans:
-      "Pending and in-progress are not automatically failures. The right next step depends on whether Kairo is reviewing, waiting on a source, or waiting on corrections.",
+      "Pending and in-progress are not automatically failures. The right next step depends on whether KairoID is reviewing, waiting on a source, or waiting on corrections.",
     steps: [
       "Check the workflow timeline or detail screen for the latest visible action.",
-      "Confirm whether Kairo requested more evidence, a contact update, or a downstream organization response.",
-      "Avoid creating duplicate verification requests unless Kairo explicitly advises that path.",
+      "Confirm whether KairoID requested more evidence, a contact update, or a downstream organization response.",
+      "Avoid creating duplicate verification requests unless KairoID explicitly advises that path.",
       "If the status looks stale without explanation, contact support with the verification ID and route.",
     ],
     whatHappensNext: [
-      "Kairo may continue the request automatically if the next dependency completes.",
+      "KairoID may continue the request automatically if the next dependency completes.",
       "A stale state should be investigated through support rather than worked around with duplicate submissions.",
     ],
     commonProblems: [
@@ -1192,7 +1192,7 @@ export const helpArticles: HelpArticle[] = [
       },
       {
         title: "Institution or HR has already responded",
-        detail: "The request may still need Kairo review before it becomes terminal or verified.",
+        detail: "The request may still need KairoID review before it becomes terminal or verified.",
       },
     ],
     related: [
@@ -1223,7 +1223,7 @@ export const helpArticles: HelpArticle[] = [
       "Confirm you opened the full public share link.",
       "Ask the candidate whether the share is still meant to be active.",
       "If the share is expired or revoked, create a fresh one only if the candidate still wants access granted.",
-      "Do not try to bypass the share flow by asking for protected candidate data outside Kairo.",
+      "Do not try to bypass the share flow by asking for protected candidate data outside KairoID.",
     ],
     whatHappensNext: [
       "A new share can restore access if the candidate explicitly creates it.",
@@ -1246,7 +1246,7 @@ export const helpArticles: HelpArticle[] = [
   {
     slug: "login-reset-troubleshooting",
     title: "Login failed or the password reset link does not work",
-    summary: "How to troubleshoot sign-in and reset-link issues across Kairo products.",
+    summary: "How to troubleshoot sign-in and reset-link issues across KairoID products.",
     audience: ["candidate", "hr", "institution", "troubleshooting"],
     section: "troubleshooting",
     category: "Account troubleshooting",
@@ -1262,7 +1262,7 @@ export const helpArticles: HelpArticle[] = [
     whatThisMeans:
       "Login problems often come from the wrong product route, an expired session, or an outdated reset link rather than a broken account itself.",
     steps: [
-      "Confirm you are using the correct Kairo product URL for Candidate, HR, or Institution.",
+      "Confirm you are using the correct KairoID product URL for Candidate, HR, or Institution.",
       "Use the newest reset link or token rather than retrying an older message.",
       "Log in again after a session-expired state instead of continuing from a stale page.",
       "Use support if the issue persists after a clean password reset attempt.",
@@ -1299,7 +1299,7 @@ export const helpArticles: HelpArticle[] = [
       "revoked token",
       "already completed request",
     ],
-    whoItsFor: "Institution users opening a public Kairo verification link that no longer works.",
+    whoItsFor: "Institution users opening a public KairoID verification link that no longer works.",
     whatThisMeans:
       "A secure public verification link should fail closed when it is no longer valid. That is expected behavior, not a reason to guess the underlying candidate data.",
     steps: [
@@ -1309,7 +1309,7 @@ export const helpArticles: HelpArticle[] = [
       "Use support if the link appears unavailable unexpectedly and the request should still be open.",
     ],
     whatHappensNext: [
-      "Kairo may issue a new valid route if the workflow still supports response.",
+      "KairoID may issue a new valid route if the workflow still supports response.",
       "Invalid, expired, revoked, or completed routes should not reveal extra private request details publicly.",
     ],
     commonProblems: [

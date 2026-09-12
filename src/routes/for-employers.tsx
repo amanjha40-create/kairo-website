@@ -23,7 +23,7 @@ import {
 } from "@/components/product-pages/shared";
 import { HR_WORKSPACE_URL, urlLabel } from "@/lib/domain-config";
 
-const TITLE = "For Employers — Kairo";
+const TITLE = "For Employers — KairoID";
 const DESC =
   "Hire on verified Trust Passports and respond to employment verification requests — with consent at the centre of every action.";
 
@@ -203,7 +203,7 @@ function ForEmployersPage() {
         eyebrow="Hiring Starts With Trust"
         title="Every hire"
         gradientWord="is a trust decision."
-        intro="Resumes are self-declared. Documents can be edited. Verification is repeated across every organisation a professional joins. Kairo makes trust portable — so employers can hire on verified facts instead of chasing them."
+        intro="Resumes are self-declared. Documents can be edited. Verification is repeated across every organisation a professional joins. KairoID makes trust portable — so employers can hire on verified facts instead of chasing them."
       >
         <BenefitGrid
           items={[
@@ -309,7 +309,7 @@ function ForEmployersPage() {
       <Section
         eyebrow="Benefits"
         title="Why employers"
-        gradientWord="choose Kairo."
+        gradientWord="choose KairoID."
       >
         <BenefitGrid
           items={[

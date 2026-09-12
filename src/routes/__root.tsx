@@ -76,12 +76,12 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": ["Organization", "LocalBusiness"],
-  name: "Kairo",
+  name: "KairoID",
   url: WEBSITE_URL,
   logo: `${WEBSITE_URL}/favicon.ico`,
   image: `${WEBSITE_URL}/favicon.ico`,
   description:
-    "Portable trust infrastructure. Kairo begins with employment verification and is building a lifelong, candidate-owned Trust Passport.",
+    "KairoID: Verify once. Trusted everywhere. Portable, candidate-owned professional trust infrastructure.",
   email: "contact@kairoid.com",
   telephone: "+91-8767299299",
   priceRange: "₹₹",
@@ -112,11 +112,11 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Kairo",
+  name: "KairoID",
   url: WEBSITE_URL,
-  description: "AI-powered verified professional identity and trust infrastructure platform.",
+  description: "Verify once. Trusted everywhere.",
   inLanguage: "en-US",
-  publisher: { "@type": "Organization", name: "Kairo" },
+  publisher: { "@type": "Organization", name: "KairoID" },
   potentialAction: {
     "@type": "SearchAction",
     target: {
@@ -130,11 +130,11 @@ const websiteSchema = {
 const softwareSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  name: "Kairo",
+  name: "KairoID",
   applicationCategory: "BusinessApplication",
   applicationSubCategory: "Background Verification & Identity Trust Platform",
   operatingSystem: "Web",
-  description: "Reusable, source-verified professional identity infrastructure for hiring teams.",
+  description: "KairoID: Verify once. Trusted everywhere.",
   offers: { "@type": "Offer", price: "99", priceCurrency: "INR" },
   url: WEBSITE_URL,
 };
@@ -146,10 +146,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
       { name: "theme-color", content: "#0a0a1a" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1" },
-      { name: "author", content: "Kairo" },
-      { name: "application-name", content: "Kairo" },
-      { name: "apple-mobile-web-app-title", content: "Kairo" },
-      { property: "og:site_name", content: "Kairo" },
+      { name: "author", content: "KairoID" },
+      { name: "application-name", content: "KairoID" },
+      { name: "apple-mobile-web-app-title", content: "KairoID" },
+      { property: "og:site_name", content: "KairoID" },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "en_US" },
       { name: "twitter:card", content: "summary_large_image" },

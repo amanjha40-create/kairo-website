@@ -44,9 +44,9 @@ import {
 } from "@/lib/support";
 
 const PAGE_URL = siteUrl("/help-center/contact-support");
-const PAGE_TITLE = "Contact Kairo Support";
+const PAGE_TITLE = "Contact KairoID Support";
 const PAGE_DESC =
-  "Call Kairo, email support, submit a support request, or report a security or account-access concern.";
+  "Call KairoID, email support, submit a support request, or report a security or account-access concern.";
 
 const searchSchema = z.object({
   product: z.enum(supportProducts).optional(),
@@ -180,10 +180,10 @@ function ContactSupportPage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_1.1fr]">
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-soft">
-                <LifeBuoy className="h-3.5 w-3.5" /> Contact Kairo Support
+                <LifeBuoy className="h-3.5 w-3.5" /> Contact KairoID Support
               </div>
               <h1 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl">
-                Get help from the Kairo team.
+                Get help from the KairoID team.
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
                 Use this support hub for product issues, account access concerns, onboarding help,
@@ -199,7 +199,7 @@ function ContactSupportPage() {
                     <Phone className="mt-1 h-4 w-4 text-primary" />
                     <div>
                       <div className="text-base font-semibold text-foreground">
-                        Call Kairo Support
+                        Call KairoID Support
                       </div>
                       <div className="mt-1 text-sm text-muted-foreground">
                         {SUPPORT_PHONE_DISPLAY}
@@ -230,7 +230,7 @@ function ContactSupportPage() {
                     <MessageSquareWarning className="mt-1 h-4 w-4 text-primary" />
                     <div>
                       <div className="text-base font-semibold text-foreground">
-                        Chat with Kairo Support
+                        Chat with KairoID Support
                       </div>
                       <div className="mt-1 text-sm text-muted-foreground">
                         {chatAvailable
@@ -256,7 +256,7 @@ function ContactSupportPage() {
                     </div>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                       Use this for suspicious login, wrong organization access, suspected
-                      information exposure, or loss of access to a work account. Never send Kairo
+                      information exposure, or loss of access to a work account. Never send KairoID
                       your password, OTP, access token, refresh token, or private key.
                     </p>
                   </div>
@@ -387,7 +387,7 @@ function ContactSupportPage() {
 
                 {submitted && !serverError && (
                   <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-800">
-                    Your support request has been received by Kairo. {SUPPORT_RESPONSE_PROMISE}
+                    Your support request has been received by KairoID. {SUPPORT_RESPONSE_PROMISE}
                   </div>
                 )}
 

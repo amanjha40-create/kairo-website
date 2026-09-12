@@ -4,7 +4,7 @@ import { Fingerprint, Building2, GraduationCap, BadgeCheck, ShieldCheck, Lock, S
 import { PageHero, Section, SplitSection, BenefitGrid, FinalCTA } from "@/components/product-pages/shared";
 import { PhoneFrame, productScreens } from "@/components/product/screens";
 
-const TITLE = "Trust Passport — Kairo";
+const TITLE = "Trust Passport — KairoID";
 const DESC = "One verified professional identity that professionals own for life and share with consent.";
 
 export const Route = createFileRoute("/trust-passport")({

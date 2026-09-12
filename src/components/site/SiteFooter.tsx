@@ -49,7 +49,7 @@ export function SiteFooter() {
           <div className="md:col-span-2 space-y-5">
             <Logo className="h-7" />
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
-              Portable professional trust infrastructure for professionals, employers and institutions.
+              Verify once. Trusted everywhere.
             </p>
 
             <div className="space-y-1.5 text-sm text-muted-foreground">
@@ -61,11 +61,11 @@ export function SiteFooter() {
               href="https://www.linkedin.com/company/kairoid"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Follow Kairo on LinkedIn"
+              aria-label="Follow KairoID on LinkedIn"
               className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 h-9 text-xs font-medium text-muted-foreground hover:border-primary/40 hover:text-primary hover:-translate-y-0.5 transition-all"
             >
               <Linkedin className="h-4 w-4" />
-              <span>Follow Kairo on LinkedIn</span>
+              <span>Follow KairoID on LinkedIn</span>
             </a>
           </div>
           {cols.map((c) => (
@@ -84,8 +84,8 @@ export function SiteFooter() {
           ))}
         </div>
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} Kairo. All rights reserved.</p>
-          <p className="text-xs text-muted-foreground">Reusable trust for the modern workforce.</p>
+          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} KairoID. All rights reserved.</p>
+          <p className="text-xs text-muted-foreground">Verify once. Trusted everywhere.</p>
         </div>
       </div>
     </footer>
