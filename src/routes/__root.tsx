@@ -78,8 +78,8 @@ const organizationSchema = {
   "@type": ["Organization", "LocalBusiness"],
   name: "KairoID",
   url: WEBSITE_URL,
-  logo: `${WEBSITE_URL}/favicon.ico`,
-  image: `${WEBSITE_URL}/favicon.ico`,
+  logo: `${WEBSITE_URL}/kairoid-favicon.png`,
+  image: `${WEBSITE_URL}/kairoid-favicon.png`,
   description:
     "KairoID: Verify once. Trusted everywhere. Portable, candidate-owned professional trust infrastructure.",
   email: "contact@kairoid.com",
@@ -157,7 +157,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico" },
+      { rel: "icon", type: "image/png", sizes: "64x64", href: "/kairoid-favicon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

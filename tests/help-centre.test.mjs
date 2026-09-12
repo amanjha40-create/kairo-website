@@ -26,17 +26,25 @@ const validSections = new Set([
 test("the visible website brand uses the approved canonical KairoID lockup", () => {
   const logoPath = path.join(repoRoot, "src/assets/kairoid-logo-primary.png");
   const logoHash = crypto.createHash("sha256").update(fs.readFileSync(logoPath)).digest("hex");
+  const faviconPath = path.join(repoRoot, "public/kairoid-favicon.png");
+  const faviconHash = crypto
+    .createHash("sha256")
+    .update(fs.readFileSync(faviconPath))
+    .digest("hex");
   const logoSource = fs.readFileSync(path.join(repoRoot, "src/components/Logo.tsx"), "utf8");
+  const rootSource = fs.readFileSync(path.join(repoRoot, "src/routes/__root.tsx"), "utf8");
   const footerSource = fs.readFileSync(
     path.join(repoRoot, "src/components/site/SiteFooter.tsx"),
     "utf8",
   );
 
   assert.equal(logoHash, "1c386d11e0c9dcbb4d67e99f9f5bffef779664b2c75452dedf2391f6e6aee5dc");
+  assert.equal(faviconHash, "1042fd2a4e70c06387ddcb8d9357e36357614fa9a8ba7a692cd7c455d3561e89");
   assert.match(logoSource, /alt="KairoID"/);
   assert.match(logoSource, /width=\{728\}/);
   assert.match(logoSource, /height=\{192\}/);
   assert.match(footerSource, /Verify once\. Trusted everywhere\./);
+  assert.match(rootSource, /href: "\/kairoid-favicon\.png"/);
 });
 
 function loadTsModule(filePath, { stripSiteUrlImport = false } = {}) {
