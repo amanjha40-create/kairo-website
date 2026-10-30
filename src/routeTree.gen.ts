@@ -47,6 +47,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as HelpCenterIndexRouteImport } from './routes/help-center.index'
 import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as AppIndexRouteImport } from './routes/app.index'
+import { Route as InviteTokenRouteImport } from './routes/invite.$token'
 import { Route as HelpCenterContactSupportRouteImport } from './routes/help-center.contact-support'
 import { Route as HelpCenterSlugRouteImport } from './routes/help-center.$slug'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -260,6 +261,11 @@ const AppIndexRoute = AppIndexRouteImport.update({
   path: '/',
   getParentRoute: () => AppRoute,
 } as any)
+const InviteTokenRoute = InviteTokenRouteImport.update({
+  id: '/invite/$token',
+  path: '/invite/$token',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HelpCenterContactSupportRoute =
   HelpCenterContactSupportRouteImport.update({
     id: '/help-center/contact-support',
@@ -399,6 +405,7 @@ export interface FileRoutesByFullPath {
   '/blog/$slug': typeof BlogSlugRoute
   '/help-center/$slug': typeof HelpCenterSlugRoute
   '/help-center/contact-support': typeof HelpCenterContactSupportRoute
+  '/invite/$token': typeof InviteTokenRoute
   '/app/': typeof AppIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/help-center/': typeof HelpCenterIndexRoute
@@ -456,6 +463,7 @@ export interface FileRoutesByTo {
   '/blog/$slug': typeof BlogSlugRoute
   '/help-center/$slug': typeof HelpCenterSlugRoute
   '/help-center/contact-support': typeof HelpCenterContactSupportRoute
+  '/invite/$token': typeof InviteTokenRoute
   '/app': typeof AppIndexRoute
   '/blog': typeof BlogIndexRoute
   '/help-center': typeof HelpCenterIndexRoute
@@ -515,6 +523,7 @@ export interface FileRoutesById {
   '/blog/$slug': typeof BlogSlugRoute
   '/help-center/$slug': typeof HelpCenterSlugRoute
   '/help-center/contact-support': typeof HelpCenterContactSupportRoute
+  '/invite/$token': typeof InviteTokenRoute
   '/app/': typeof AppIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/help-center/': typeof HelpCenterIndexRoute
@@ -575,6 +584,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/help-center/$slug'
     | '/help-center/contact-support'
+    | '/invite/$token'
     | '/app/'
     | '/blog/'
     | '/help-center/'
@@ -632,6 +642,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/help-center/$slug'
     | '/help-center/contact-support'
+    | '/invite/$token'
     | '/app'
     | '/blog'
     | '/help-center'
@@ -690,6 +701,7 @@ export interface FileRouteTypes {
     | '/blog/$slug'
     | '/help-center/$slug'
     | '/help-center/contact-support'
+    | '/invite/$token'
     | '/app/'
     | '/blog/'
     | '/help-center/'
@@ -741,6 +753,7 @@ export interface RootRouteChildren {
   BlogSlugRoute: typeof BlogSlugRoute
   HelpCenterSlugRoute: typeof HelpCenterSlugRoute
   HelpCenterContactSupportRoute: typeof HelpCenterContactSupportRoute
+  InviteTokenRoute: typeof InviteTokenRoute
   BlogIndexRoute: typeof BlogIndexRoute
   HelpCenterIndexRoute: typeof HelpCenterIndexRoute
   ApiPublicContactRoute: typeof ApiPublicContactRoute
@@ -1015,6 +1028,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppIndexRouteImport
       parentRoute: typeof AppRoute
     }
+    '/invite/$token': {
+      id: '/invite/$token'
+      path: '/invite/$token'
+      fullPath: '/invite/$token'
+      preLoaderRoute: typeof InviteTokenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/help-center/contact-support': {
       id: '/help-center/contact-support'
       path: '/help-center/contact-support'
@@ -1230,6 +1250,7 @@ const rootRouteChildren: RootRouteChildren = {
   BlogSlugRoute: BlogSlugRoute,
   HelpCenterSlugRoute: HelpCenterSlugRoute,
   HelpCenterContactSupportRoute: HelpCenterContactSupportRoute,
+  InviteTokenRoute: InviteTokenRoute,
   BlogIndexRoute: BlogIndexRoute,
   HelpCenterIndexRoute: HelpCenterIndexRoute,
   ApiPublicContactRoute: ApiPublicContactRoute,

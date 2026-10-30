@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kairoid.app",
+      "sha256_cert_fingerprints": [
+        "38:CB:29:61:3E:0B:47:45:41:51:21:43:FA:6D:2A:BF:1B:62:E5:DF:E5:D9:29:56:14:E6:4D:51:51:06:03:79"
+      ]
+    }
+  }
+]

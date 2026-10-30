@@ -3,6 +3,7 @@ import {
   Outlet,
   Link,
   createRootRouteWithContext,
+  useLocation,
   useRouter,
   HeadContent,
   Scripts,
@@ -213,24 +214,32 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const router = useRouter();
+  const { pathname } = useLocation();
+  const isPublicInviteRouter = pathname.startsWith("/invite/");
 
   useEffect(() => {
-    // Initial pageview
-    trackPageview(window.location.pathname + window.location.search);
+    if (!window.location.pathname.startsWith("/invite/")) {
+      trackPageview(window.location.pathname + window.location.search);
+    }
     const unsub = router.subscribe("onResolved", ({ toLocation }) => {
-      trackPageview((toLocation.pathname ?? "/") + (toLocation.searchStr ?? ""));
+      const nextPath = toLocation.pathname ?? "/";
+      if (!nextPath.startsWith("/invite/")) {
+        trackPageview(nextPath + (toLocation.searchStr ?? ""));
+      }
     });
     return () => unsub();
   }, [router]);
 
+  const content = (
+    <TooltipProvider delayDuration={150}>
+      <Outlet />
+      <Toaster richColors position="top-right" />
+    </TooltipProvider>
+  );
+
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <TooltipProvider delayDuration={150}>
-          <Outlet />
-          <Toaster richColors position="top-right" />
-        </TooltipProvider>
-      </AuthProvider>
+      {isPublicInviteRouter ? content : <AuthProvider>{content}</AuthProvider>}
     </QueryClientProvider>
   );
 }
